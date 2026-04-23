@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Untapped Engagement Opportunity</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="theme-navy">
+    <div class="widget">
+        <div class="header">
+            <div class="header-label">Engagement Gap Analysis</div>
+            <div class="header-title">The Dialogue Opportunity</div>
+            <div class="header-insight">Your team clicks reactions easily—but rarely engages in deeper dialogue. Comments signal stronger connection and correlate with better task execution.</div>
+        </div>
+
+        <div class="comparison">
+            <div class="comparison-side light">
+                <div class="comparison-icon">❤️</div>
+                <div class="comparison-value">56K</div>
+                <div class="comparison-label">Reactions</div>
+                <div class="comparison-desc">Quick, one-click engagement. Easy, visible, but shallow.</div>
+            </div>
+
+            <div class="comparison-side deep">
+                <div class="comparison-icon">💬</div>
+                <div class="comparison-value">22K</div>
+                <div class="comparison-label">Comments</div>
+                <div class="comparison-desc">Thoughtful, typed responses. Harder to give, but signals deeper investment.</div>
+            </div>
+        </div>
+
+        <div class="insight-box">
+            <div class="insight-title">Why This Matters</div>
+            <div class="insight-stat">2.5:1</div>
+            <div class="insight-text">Your reaction-to-comment ratio is 2.5:1. High-performing networks run closer to 1.5:1 or even 1:1. Comments indicate employees are actually reading, thinking, and responding—not just scrolling and tapping.</div>
+
+            <div class="example-grid">
+                <div class="example-card">
+                    <div class="example-header">
+                        <div class="example-icon">❤️</div>
+                        <div class="example-title">Reaction Engagement</div>
+                    </div>
+                    <div class="example-content">"Great job team! 🎉"<br>[47 reactions, 2 comments]</div>
+                    <div class="example-impact">Surface-level acknowledgment</div>
+                </div>
+
+                <div class="example-card">
+                    <div class="example-header">
+                        <div class="example-icon">💬</div>
+                        <div class="example-title">Comment Engagement</div>
+                    </div>
+                    <div class="example-content">"Great job team! 🎉"<br>[12 reactions, 18 comments sharing wins]</div>
+                    <div class="example-impact">Deeper dialogue, team connection</div>
+                </div>
+
+                <div class="example-card">
+                    <div class="example-header">
+                        <div class="example-icon">🔥</div>
+                        <div class="example-title">Model Store Example</div>
+                    </div>
+                    <div class="example-content">League City TX manager comments on every team post within 2 hours. Their 1:1 ratio drives 94% completion.</div>
+                    <div class="example-impact">Proven engagement = execution link</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="actions">
+            <div class="action-card" onclick="viewAction('manager-model')">
+                <div class="action-priority">Quick Win</div>
+                <div class="action-title">Manager Comments Within 2 Hours</div>
+                <div class="action-desc">Set expectation: managers comment (not just react) on all team posts within 2 hours. Model stores do this religiously—it signals "I see you, I'm engaged."</div>
+            </div>
+
+            <div class="action-card" onclick="viewAction('ask-questions')">
+                <div class="action-priority">Culture Shift</div>
+                <div class="action-title">Ask Open-Ended Questions in Posts</div>
+                <div class="action-desc">"What's one win from this week?" instead of "Great week, team!" Questions invite comments. Statements get reactions. Change the prompt, change the response.</div>
+            </div>
+
+            <div class="action-card" onclick="viewAction('recognize-comments')">
+                <div class="action-priority">Incentive</div>
+                <div class="action-title">Public Recognition for Commenters</div>
+                <div class="action-desc">Weekly shoutout: "Shoutout to Jamie for the thoughtful comment on yesterday's safety post!" Celebrate the behavior you want to see more of.</div>
+            </div>
+
+            <div class="action-card" onclick="viewAction('track-ratio')">
+                <div class="action-priority">Measurement</div>
+                <div class="action-title">Track Comment Ratio as KPI</div>
+                <div class="action-desc">Add "Reaction:Comment Ratio" to your monthly engagement dashboard. Target: Move from 2.5:1 to 1.5:1 within 90 days. Measure progress weekly.</div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function viewAction(actionId) {
+            const actions = {
+                'manager-model': 'Manager Comment Protocol:\n\n✓ Check WorkJam feed every 2 hours (9am, 11am, 1pm, 3pm)\n✓ Comment (not just react) on all team posts\n✓ Ask follow-up questions in comments\n✓ Tag specific team members to invite dialogue\n✓ Share manager perspective or context\n\nLeague City TX manager does this—achieves 94% completion.',
+                'ask-questions': 'Question-Based Post Templates:\n\nInstead of: "Great week!"\nTry: "What was your biggest win this week?"\n\nInstead of: "Safety first!"\nTry: "What safety practice has saved you this week?"\n\nInstead of: "New promo launched!"\nTry: "Who\'s set up the new promo display? Share a pic!"\n\nQuestions = Comments. Statements = Reactions.',
+                'recognize-comments': 'Weekly Commenter Recognition:\n\nMonday: Review last week\'s comment activity\nTuesday: Identify top 3 most thoughtful commenters\nWednesday: Post public shoutout with examples\nThursday: DM each person to thank them directly\nFriday: Track if recognition increases comments\n\nCelebrate the behavior you want.',
+                'track-ratio': 'Reaction:Comment Ratio Tracking:\n\nCurrent Baseline:\n- 56,600 reactions\n- 22,114 comments\n- Ratio: 2.5:1\n\n90-Day Target:\n- Maintain ~55K reactions\n- Increase to ~37K comments\n- Ratio: 1.5:1\n\nTrack monthly. Correlate with task completion.'
+            };
+            alert(actions[actionId]);
+        }
+    </script>
+</body>
+</html>

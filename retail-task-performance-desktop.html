@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Performance Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="theme-light">
+    <div class="dashboard-widget">
+        <div class="widget-header">
+            <div class="widget-title">Retail Task Performance</div>
+            <div class="widget-subtitle">Performance Overview</div>
+        </div>
+
+        <div class="metrics-grid">
+            <div class="metric-card" onclick="drillDown('task-completion')">
+                <div class="metric-value green">92.7%</div>
+                <div class="metric-label">Task Completion</div>
+                <div class="metric-sublabel">74,771 of 80,674 tasks</div>
+            </div>
+
+            <div class="metric-card" onclick="drillDown('sentiment')">
+                <div class="metric-value blue">81%</div>
+                <div class="metric-label">Positive Sentiment</div>
+                <div class="metric-sublabel">Employee engagement</div>
+            </div>
+
+            <div class="metric-card" onclick="drillDown('surveys')">
+                <div class="metric-value green">85.4%</div>
+                <div class="metric-label">Survey Compliance</div>
+                <div class="metric-sublabel">Program adoption</div>
+            </div>
+
+            <div class="metric-card" onclick="drillDown('visual-merch')">
+                <div class="metric-value green">99.7%</div>
+                <div class="metric-label">Visual Merch</div>
+                <div class="metric-sublabel">Customer-facing tasks</div>
+            </div>
+
+            <div class="metric-card" onclick="drillDown('at-risk')">
+                <div class="metric-value amber">303</div>
+                <div class="metric-label">At-Risk Locations</div>
+                <div class="metric-sublabel">21.7% of network</div>
+            </div>
+
+            <div class="metric-card" onclick="drillDown('model-locations')">
+                <div class="metric-value blue">488</div>
+                <div class="metric-label">Model Locations</div>
+                <div class="metric-sublabel">High performance</div>
+            </div>
+        </div>
+
+        <div class="footer-info">
+            Last updated: Today • 1,395 locations • 55,896 employees • <a href="#" onclick="viewFullReport(event)" style="color: #3b82f6; text-decoration: none; font-weight: 600;">View Full Report →</a>
+        </div>
+    </div>
+
+    <script>
+        function drillDown(metric) {
+            // Replace with actual drill-down URLs or reporting links
+            const reportUrls = {
+                'task-completion': 'https://your-analytics-platform.com/reports/task-completion',
+                'sentiment': 'https://your-analytics-platform.com/reports/sentiment',
+                'surveys': 'https://your-analytics-platform.com/reports/surveys',
+                'visual-merch': 'https://your-analytics-platform.com/reports/visual-merch',
+                'at-risk': 'https://your-analytics-platform.com/reports/at-risk-locations',
+                'model-locations': 'https://your-analytics-platform.com/reports/model-locations'
+            };
+
+            // For demo purposes, show alert - replace with actual navigation
+            alert(`Drilling down into ${metric} report.\n\nIn production, this would navigate to:\n${reportUrls[metric]}`);
+            
+            // Uncomment to actually navigate:
+            // window.location.href = reportUrls[metric];
+        }
+
+        function viewFullReport(event) {
+            event.preventDefault();
+            alert('Opening full performance report.\n\nIn production, this would link to your full analytics dashboard or reporting platform.');
+            
+            // Uncomment to navigate to full report:
+            // window.location.href = 'https://your-analytics-platform.com/reports/full-performance';
+        }
+    </script>
+</body>
+</html>

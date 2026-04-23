@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WorkJam Widget Library</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    body.index-page { background: var(--bg); max-width: 1200px; margin: 0 auto; padding: 24px; }
+    .index-shell { background: transparent; }
+    .index-hero { background: var(--wj-navy); color: white; padding: 20px; border-radius: var(--radius); box-shadow: var(--shadow-md); margin-bottom: 20px; }
+    .index-hero h1 { font-size: 28px; margin-bottom: 6px; }
+    .index-hero p { font-size: 14px; opacity: .92; }
+    .index-section { margin-bottom: 24px; }
+    .index-section h2 { font-size: 14px; text-transform: uppercase; letter-spacing: .8px; color: var(--text-sec); margin-bottom: 12px; }
+    .index-grid { display: grid; grid-template-columns: repeat(auto-fit,minmax(260px,1fr)); gap: 16px; }
+    .index-card { display: block; text-decoration: none; background: var(--surface); border: 2px solid var(--border); border-radius: var(--radius); padding: 16px; box-shadow: var(--shadow-sm); }
+    .index-card:hover { border-color: var(--wj-navy); transform: translateY(-1px); }
+    .index-card-title { font-size: 16px; font-weight: 800; color: var(--text-primary); margin-bottom: 6px; }
+    .index-card-file { font-size: 12px; color: var(--text-muted); }
+  </style>
+</head>
+<body class="index-page">
+  <div class="index-shell">
+    <div class="index-hero">
+      <h1>WorkJam Widget Library</h1>
+      <p>Shared GitHub-hosted widget collection using one common <code>styles.css</code> file.</p>
+    </div>
+    
+      <section class="index-section">
+        <h2>Dashboards</h2>
+        <div class="index-grid">
+          <a class="index-card" href="CStoreSalesDash.html">
+            <div class="index-card-title">C-Store Analytics Dashboard</div>
+            <div class="index-card-file">CStoreSalesDash.html</div>
+          </a>
+          <a class="index-card" href="WJ_Restaurant_Sales.html">
+            <div class="index-card-title">Restaurant Sales Analytics Dashboard</div>
+            <div class="index-card-file">WJ_Restaurant_Sales.html</div>
+          </a>
+          <a class="index-card" href="WJ_Task_Real.html">
+            <div class="index-card-title">WorkJam Task Analytics Dashboard</div>
+            <div class="index-card-file">WJ_Task_Real.html</div>
+          </a>
+          <a class="index-card" href="platform-adoption-desktop.html">
+            <div class="index-card-title">Platform Adoption &amp; Engagement</div>
+            <div class="index-card-file">platform-adoption-desktop.html</div>
+          </a>
+          <a class="index-card" href="retail-task-performance-desktop.html">
+            <div class="index-card-title">Retail Task Performance</div>
+            <div class="index-card-file">retail-task-performance-desktop.html</div>
+          </a>
+          <a class="index-card" href="task_dashboard.html">
+            <div class="index-card-title">WorkJam Tasks Analytics Widget</div>
+            <div class="index-card-file">task_dashboard.html</div>
+          </a>
+        </div>
+      </section>
+
+      <section class="index-section">
+        <h2>Insight Widgets</h2>
+        <div class="index-grid">
+          <a class="index-card" href="drr_mutilation_widget.html">
+            <div class="index-card-title">DRR Mutilation Impact</div>
+            <div class="index-card-file">drr_mutilation_widget.html</div>
+          </a>
+          <a class="index-card" href="widget-at-risk-recovery.html">
+            <div class="index-card-title">At-Risk Store Recovery</div>
+            <div class="index-card-file">widget-at-risk-recovery.html</div>
+          </a>
+          <a class="index-card" href="widget-at-risk-stores-regional.html">
+            <div class="index-card-title">At-Risk Stores Regional View</div>
+            <div class="index-card-file">widget-at-risk-stores-regional.html</div>
+          </a>
+          <a class="index-card" href="widget-boh-gap.html">
+            <div class="index-card-title">Your Hidden Execution Gap</div>
+            <div class="index-card-file">widget-boh-gap.html</div>
+          </a>
+          <a class="index-card" href="widget-comment-engagement.html">
+            <div class="index-card-title">Untapped Engagement Opportunity</div>
+            <div class="index-card-file">widget-comment-engagement.html</div>
+          </a>
+          <a class="index-card" href="widget-engagement-execution.html">
+            <div class="index-card-title">Engagement Drives Results</div>
+            <div class="index-card-file">widget-engagement-execution.html</div>
+          </a>
+          <a class="index-card" href="widget-late-task-cost.html">
+            <div class="index-card-title">Cost of Late Tasks</div>
+            <div class="index-card-file">widget-late-task-cost.html</div>
+          </a>
+          <a class="index-card" href="widget-model-stores.html">
+            <div class="index-card-title">Learn from Model Stores</div>
+            <div class="index-card-file">widget-model-stores.html</div>
+          </a>
+          <a class="index-card" href="widget-survey-benchmark.html">
+            <div class="index-card-title">Survey Engagement Benchmark</div>
+            <div class="index-card-file">widget-survey-benchmark.html</div>
+          </a>
+        </div>
+      </section>
+
+      <section class="index-section">
+        <h2>Store / Location Widgets</h2>
+        <div class="index-grid">
+          <a class="index-card" href="widget-location-variable.html">
+            <div class="index-card-title">Location Dashboard</div>
+            <div class="index-card-file">widget-location-variable.html</div>
+          </a>
+          <a class="index-card" href="widget-mystery-shop-retail.html">
+            <div class="index-card-title">Mystery Shop Score - Retail</div>
+            <div class="index-card-file">widget-mystery-shop-retail.html</div>
+          </a>
+          <a class="index-card" href="widget-nps-retail.html">
+            <div class="index-card-title">NPS Score - Retail</div>
+            <div class="index-card-file">widget-nps-retail.html</div>
+          </a>
+        </div>
+      </section>
+
+  </div>
+</body>
+</html>

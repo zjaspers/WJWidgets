@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Hidden Execution Gap</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="theme-gold">
+    <div class="widget">
+        <div class="header">
+            <div class="header-label">Network-Wide Pattern</div>
+            <div class="header-title">The Back-of-House Gap</div>
+            <div class="header-stat">16 pts</div>
+            <div class="header-insight">Customer-facing tasks get done. Back-of-house tasks don't. This gap is costing you money every week.</div>
+        </div>
+
+        <div class="task-breakdown">
+            <div class="task-section">
+                <div class="task-header">
+                    <div class="task-name">Visual Merchandising (Customer-Facing)</div>
+                    <div class="task-score good">99.7%</div>
+                </div>
+                <div class="progress-bar">
+                    <div class="progress-fill good" style="width: 99.7%;"></div>
+                </div>
+                <div class="task-detail">Nearly perfect execution. Teams prioritize what customers see.</div>
+            </div>
+
+            <div class="task-section">
+                <div class="task-header">
+                    <div class="task-name">Prestige Merchandising (Customer-Facing)</div>
+                    <div class="task-score good">98.2%</div>
+                </div>
+                <div class="progress-bar">
+                    <div class="progress-fill good" style="width: 98.2%;"></div>
+                </div>
+                <div class="task-detail">High-value displays consistently completed on time.</div>
+            </div>
+
+            <div class="gap-callout">
+                <div class="gap-title">⚠️ Hidden Execution Problem</div>
+                <div class="gap-stat">-16pts</div>
+                <div class="gap-text">Back-of-house tasks score 16 percentage points lower than customer-facing work. Inventory, wellness planograms, and operational compliance are falling through the cracks.</div>
+                
+                <div class="impact-box">
+                    <div class="impact-text">💰 Impact: Each 1pt improvement in inventory control = ~$3,600 recovered shrink per store annually</div>
+                </div>
+            </div>
+
+            <div class="task-section">
+                <div class="task-header">
+                    <div class="task-name">Inventory Control (RTDC)</div>
+                    <div class="task-score bad">83.8%</div>
+                </div>
+                <div class="progress-bar">
+                    <div class="progress-fill bad" style="width: 83.8%;"></div>
+                </div>
+                <div class="task-detail">Your biggest opportunity. 16pts below visual merch performance.</div>
+            </div>
+
+            <div class="task-section">
+                <div class="task-header">
+                    <div class="task-name">Wellness Planograms</div>
+                    <div class="task-score bad">84.5%</div>
+                </div>
+                <div class="progress-bar">
+                    <div class="progress-fill bad" style="width: 84.5%;"></div>
+                </div>
+                <div class="task-detail">Back-of-house compliance lags despite importance.</div>
+            </div>
+        </div>
+
+        <div class="actions">
+            <div class="action-card" onclick="viewPlaybook()">
+                <div class="action-priority">Step 1 • Closes the gap</div>
+                <div class="action-title">Treat Inventory Like Visual Merch</div>
+                <div class="action-desc">You're already great at visual tasks (99.7%). Apply that same urgency and accountability to inventory control. Schedule it, assign it, track it the same way.</div>
+            </div>
+
+            <div class="action-card" onclick="viewSchedule()">
+                <div class="action-priority">Step 2 • Build the habit</div>
+                <div class="action-title">Block Time for Back-of-House</div>
+                <div class="action-desc">Reserve 8-10am Tuesday/Thursday for inventory tasks. Protect it like you protect floor coverage during peak hours.</div>
+            </div>
+
+            <div class="action-card" onclick="viewBenchmark()">
+                <div class="action-priority">Best Practice</div>
+                <div class="action-title">Learn from Model Stores</div>
+                <div class="action-desc">Top stores achieve 92%+ on inventory control. See their workflow and task delegation approach.</div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function viewPlaybook() {
+            alert('Opening back-of-house execution playbook...\n\n✓ Assign inventory tasks like visual merch\n✓ Set 2-hour completion windows\n✓ Daily manager check-in at 10am\n✓ Track completion in morning huddle');
+        }
+
+        function viewSchedule() {
+            alert('Sample back-of-house schedule:\n\nTuesday 8-10am: Inventory counts\nThursday 8-10am: Wellness planograms\nFriday 9-11am: Compliance audits\n\nProtect this time like floor coverage.');
+        }
+
+        function viewBenchmark() {
+            alert('Model store best practices:\n\n• League City TX: 94% inventory control\n• Concord NC: 93% wellness planograms\n• Strategy: Rotate back-of-house "owner" weekly\n• Key: Treat it with same urgency as merchandising');
+        }
+    </script>
+</body>
+</html>

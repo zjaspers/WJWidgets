@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NPS Score - Retail</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="theme-navy">
+    <div class="widget">
+        <div class="header">
+            <div class="header-title">📊 Net Promoter Score</div>
+            <div class="header-subtitle">Store #<span id="store-number">452</span> - Customer Loyalty</div>
+        </div>
+
+        <div class="nps-score-section">
+            <div class="nps-label">Current NPS Score</div>
+            <div class="nps-value">51</div>
+            <div class="nps-rating">⭐ Excellent - Top Quartile</div>
+            <div class="nps-change">↗ +7 vs last quarter</div>
+        </div>
+
+        <div class="breakdown-section">
+            <div class="section-title">📈 Score Breakdown</div>
+            
+            <div class="breakdown-grid">
+                <div class="breakdown-card promoters">
+                    <div class="breakdown-percent">64%</div>
+                    <div class="breakdown-label">Promoters</div>
+                    <div class="breakdown-count">1,847 customers</div>
+                </div>
+
+                <div class="breakdown-card passives">
+                    <div class="breakdown-percent">23%</div>
+                    <div class="breakdown-label">Passives</div>
+                    <div class="breakdown-count">663 customers</div>
+                </div>
+
+                <div class="breakdown-card detractors">
+                    <div class="breakdown-percent">13%</div>
+                    <div class="breakdown-label">Detractors</div>
+                    <div class="breakdown-count">375 customers</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="insights-section">
+            <div class="section-title">💡 Key Insights</div>
+            
+            <div class="insight-card">
+                <div class="insight-title">Top Praise</div>
+                <div class="insight-text">Associates' product knowledge (mentioned in 72% of positive feedback), store ambiance, and fast checkout experience.</div>
+            </div>
+
+            <div class="insight-card">
+                <div class="insight-title">Main Concerns</div>
+                <div class="insight-text">Out-of-stock popular sizes (38% of detractors) and inconsistent fitting room availability during peak hours.</div>
+            </div>
+
+            <div class="insight-card">
+                <div class="insight-title">Opportunity</div>
+                <div class="insight-text">Loyalty program enrollment at 47% - converting non-members could move score to 55+. Focus on sign-up at checkout.</div>
+            </div>
+        </div>
+
+        <div class="trend-section">
+            <div class="section-title">📅 Quarterly Trend</div>
+            
+            <div class="trend-grid">
+                <div class="trend-item">
+                    <div class="trend-month">Q1 2025</div>
+                    <div class="trend-value">46</div>
+                </div>
+                <div class="trend-item">
+                    <div class="trend-month">Q2 2025</div>
+                    <div class="trend-value">42</div>
+                </div>
+                <div class="trend-item">
+                    <div class="trend-month">Q3 2025</div>
+                    <div class="trend-value">44</div>
+                </div>
+                <div class="trend-item">
+                    <div class="trend-month">Q4 2025</div>
+                    <div class="trend-value">51</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Get WorkJam URL variables
+        const urlParams = new URLSearchParams(window.location.search);
+        const locationId = urlParams.get('locationId') || urlParams.get('externalLocationId') || '452';
+        
+        // Update UI
+        document.getElementById('store-number').textContent = locationId;
+
+        console.log('NPS Widget loaded for store:', locationId);
+    </script>
+</body>
+</html>

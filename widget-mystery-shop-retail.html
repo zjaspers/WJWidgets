@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mystery Shop Score - Retail</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="theme-navy">
+    <div class="widget">
+        <div class="header">
+            <div class="header-title">🕵️ Mystery Shop Score</div>
+            <div class="header-subtitle">Store #<span id="store-number">452</span> - Latest Visit</div>
+        </div>
+
+        <div class="score-section">
+            <div class="score-label">Overall Score</div>
+            <div class="score-value">92</div>
+            <div class="score-total">out of 100 points</div>
+            <div class="score-badge">↗ +3 vs last visit</div>
+        </div>
+
+        <div class="categories-section">
+            <div class="section-title">📋 Category Scores</div>
+            
+            <div class="category-item pass">
+                <div class="category-info">
+                    <div class="category-icon">✅</div>
+                    <div class="category-name">Greeting & Engagement</div>
+                </div>
+                <div class="category-score">19/20</div>
+            </div>
+
+            <div class="category-item pass">
+                <div class="category-info">
+                    <div class="category-icon">✅</div>
+                    <div class="category-name">Product Knowledge</div>
+                </div>
+                <div class="category-score">18/20</div>
+            </div>
+
+            <div class="category-item pass">
+                <div class="category-info">
+                    <div class="category-icon">✅</div>
+                    <div class="category-name">Store Presentation</div>
+                </div>
+                <div class="category-score">17/20</div>
+            </div>
+
+            <div class="category-item pass">
+                <div class="category-info">
+                    <div class="category-icon">✅</div>
+                    <div class="category-name">Fitting Room Service</div>
+                </div>
+                <div class="category-score">18/20</div>
+            </div>
+
+            <div class="category-item fail">
+                <div class="category-info">
+                    <div class="category-icon">❌</div>
+                    <div class="category-name">Visual Merchandising</div>
+                </div>
+                <div class="category-score">13/20</div>
+            </div>
+
+            <div class="category-item">
+                <div class="category-info">
+                    <div class="category-icon">✅</div>
+                    <div class="category-name">Checkout Experience</div>
+                </div>
+                <div class="category-score">7/10</div>
+            </div>
+        </div>
+
+        <div class="failures-section">
+            <div class="section-title">🚨 Items Failed</div>
+            
+            <div class="failure-card">
+                <div class="failure-title">Front Window Display</div>
+                <div class="failure-text">Spring 2026 window signage not updated. Still displaying March promotional messaging from previous campaign.</div>
+            </div>
+
+            <div class="failure-card">
+                <div class="failure-title">Mannequin Styling</div>
+                <div class="failure-text">Center mannequin missing belt accessory per planogram. Left mannequin had incorrect shoes (black vs. specified tan).</div>
+            </div>
+
+            <div class="failure-card">
+                <div class="failure-title">Sale Signage Compliance</div>
+                <div class="failure-text">Women's denim endcap: 3 of 6 "30% Off" signs were not aligned per brand standards. One sign was faded/damaged.</div>
+            </div>
+        </div>
+
+        <div class="action-items">
+            <div class="section-title">✅ Priority Actions</div>
+            
+            <div class="action-card">
+                <div class="action-title">Immediate (Today)</div>
+                <div class="action-text">Update window signage to April Spring campaign. Replace faded sale signs. Add missing belt to center mannequin per planogram.</div>
+            </div>
+
+            <div class="action-card">
+                <div class="action-title">This Week</div>
+                <div class="action-text">Re-merchandise left window mannequin with correct tan shoes. Schedule visual team refresh for all endcap signage alignment.</div>
+            </div>
+
+            <div class="action-card">
+                <div class="action-title">Ongoing</div>
+                <div class="action-text">Maintain excellent greeting scores (19/20) and fitting room service (18/20). Continue associate recognition for customer engagement.</div>
+            </div>
+        </div>
+
+        <div class="visit-info">
+            Last Visit: April 20, 2026 • Shopper ID: MS-4482 • Next Scheduled: May 18, 2026
+        </div>
+    </div>
+
+    <script>
+        // Get WorkJam URL variables
+        const urlParams = new URLSearchParams(window.location.search);
+        const locationId = urlParams.get('locationId') || urlParams.get('externalLocationId') || '452';
+        
+        // Update UI
+        document.getElementById('store-number').textContent = locationId;
+
+        console.log('Mystery Shop Widget loaded for store:', locationId);
+    </script>
+</body>
+</html>

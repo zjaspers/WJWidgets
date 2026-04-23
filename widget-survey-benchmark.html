@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Survey Engagement Benchmark</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="theme-navy">
+    <div class="widget">
+        <div class="header">
+            <div class="header-label">Best-in-Class Benchmark</div>
+            <div class="header-title">The 1-in-3 Standard</div>
+            <div class="header-insight">7-Eleven Australia achieves 33% survey response rates across their network. That's the gold standard for frontline workforce engagement.</div>
+        </div>
+
+        <div class="benchmark-hero">
+            <div class="benchmark-stat">1-in-3</div>
+            <div class="benchmark-label">Employees Respond to Surveys</div>
+            <div class="benchmark-detail">Out of ~127,000 eligible employees, 42,301 survey responses. This isn't luck—it's deliberate strategy around survey design, timing, and manager follow-up.</div>
+        </div>
+
+        <div class="breakdown-section">
+            <div class="breakdown-title">7-Eleven's Survey Engagement Model</div>
+
+            <div class="metric-grid">
+                <div class="metric-card">
+                    <div class="metric-icon">📊</div>
+                    <div class="metric-value">42,301</div>
+                    <div class="metric-label">Survey Responses</div>
+                    <div class="metric-context">Collected across network in 30-day period</div>
+                </div>
+
+                <div class="metric-card">
+                    <div class="metric-icon">🎯</div>
+                    <div class="metric-value">33%</div>
+                    <div class="metric-label">Response Rate</div>
+                    <div class="metric-context">1 in 3 employees complete every survey</div>
+                </div>
+
+                <div class="metric-card">
+                    <div class="metric-icon">⚡</div>
+                    <div class="metric-value">2,527</div>
+                    <div class="metric-label">Training Events</div>
+                    <div class="metric-context">Embedded in workflow, not separate LMS</div>
+                </div>
+            </div>
+
+            <div class="comparison-box">
+                <div class="comparison-title">🏆 How They Achieve 1-in-3</div>
+                <div class="comparison-row">
+                    <div class="comparison-label">Short surveys (3-5 questions max)</div>
+                    <div class="comparison-value">✓</div>
+                </div>
+                <div class="comparison-row">
+                    <div class="comparison-label">Launched during shift (not after hours)</div>
+                    <div class="comparison-value">✓</div>
+                </div>
+                <div class="comparison-row">
+                    <div class="comparison-label">Manager discusses results in huddles</div>
+                    <div class="comparison-value">✓</div>
+                </div>
+                <div class="comparison-row">
+                    <div class="comparison-label">Close the loop publicly ("You said, we did")</div>
+                    <div class="comparison-value">✓</div>
+                </div>
+                <div class="comparison-row">
+                    <div class="comparison-label">Tie survey completion to store scorecards</div>
+                    <div class="comparison-value">✓</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="actions">
+            <div class="action-card" onclick="viewAction('short-surveys')">
+                <div class="action-priority">Survey Design</div>
+                <div class="action-title">Keep Surveys to 3-5 Questions</div>
+                <div class="action-desc">7-Eleven's surveys are brief. Long surveys (10+ questions) kill response rates. Ask one thing well instead of everything poorly. Target: <2 minutes to complete.</div>
+            </div>
+
+            <div class="action-card" onclick="viewAction('in-shift')">
+                <div class="action-priority">Timing Strategy</div>
+                <div class="action-title">Launch Surveys During Shift, Not After</div>
+                <div class="action-desc">Launch surveys Tuesday-Thursday, 10am-2pm. Employees on the clock = higher completion. Off-hours surveys get ignored. Make it part of the workday.</div>
+            </div>
+
+            <div class="action-card" onclick="viewAction('close-loop')">
+                <div class="action-priority">Follow-Through</div>
+                <div class="action-title">Close the Loop: "You Said, We Did"</div>
+                <div class="action-desc">If 70% of your team says break room needs updating, post an update within 2 weeks. "You told us the break room needs help. We ordered new furniture—arriving Friday." Trust = future responses.</div>
+            </div>
+
+            <div class="action-card" onclick="viewAction('manager-discuss')">
+                <div class="action-priority">Manager Role</div>
+                <div class="action-title">Discuss Results in Team Huddles</div>
+                <div class="action-desc">Monday huddle: "Last week's survey showed 80% feel supported. That's great! 20% don't—let's talk about why." Make surveys conversational, not corporate.</div>
+            </div>
+
+            <div class="action-card" onclick="viewAction('scorecard')">
+                <div class="action-priority">Accountability</div>
+                <div class="action-title">Add Survey Completion % to Store Scorecard</div>
+                <div class="action-desc">Track "Survey Response Rate" alongside sales and shrink. Target: 30%+ response rate. Celebrate stores that hit it. Coach stores below 20%.</div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function viewAction(actionId) {
+            const actions = {
+                'short-surveys': 'Survey Question Audit:\n\nCurrent: 12-question survey\nTarget: 5-question survey\n\nKeep:\n1. How supported do you feel? (1-5 scale)\n2. What\'s one thing we should change?\n3. Rate your manager (1-5 scale)\n4. Open text: Wins this week?\n5. NPS: Recommend working here?\n\nRemove: Everything else. Ship it.',
+                'in-shift': 'Survey Launch Schedule:\n\nBest times:\n- Tuesday 10am-12pm\n- Wednesday 11am-1pm\n- Thursday 10am-2pm\n\nAvoid:\n- Monday (too busy)\n- Friday (checked out)\n- Weekends (off-hours)\n- Before 9am or after 3pm\n\nLaunch during shift = 2x response rate.',
+                'close-loop': 'Close-the-Loop Template:\n\nPost format:\n"📊 You told us: [Top survey insight]\n✅ We did: [Action taken]\n📅 Timeline: [When it happens]\n💬 Questions? Comment below."\n\nExample:\n"You told us: Break room needs updating\nWe did: Ordered new furniture + microwave\nTimeline: Arriving Friday\nQuestions? Comment below."\n\nTrust builds future responses.',
+                'manager-discuss': 'Huddle Discussion Script:\n\nMonday 10am huddle (5 minutes):\n\n"Last week 47 of you completed the survey—thank you!\n\nTop insight: 80% feel supported (awesome!)\nArea to improve: 20% want clearer task prioritization\n\nThis week, I\'ll assign tasks with clear deadlines.\n\nQuestions?"\n\nMake it conversational.',
+                'scorecard': 'Survey Response Rate KPI:\n\nAdd to monthly scorecard:\n- Sales: 35%\n- Shrink: 20%\n- Customer satisfaction: 20%\n- Task completion: 15%\n- Survey response rate: 10%\n\nTarget: 30%+ response rate\n\nTrack monthly. Celebrate winners.'
+            };
+            alert(actions[actionId]);
+        }
+    </script>
+</body>
+</html>

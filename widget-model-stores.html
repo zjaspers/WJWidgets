@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learn from Model Stores</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="theme-green">
+    <div class="widget">
+        <div class="header">
+            <div class="header-label">Proven Success</div>
+            <div class="header-title">Learn from Model Stores</div>
+            <div class="header-insight">488 stores are crushing it. Here's what they're doing differently—and how you can replicate their success.</div>
+        </div>
+
+        <div class="store-grid">
+            <div class="store-card" onclick="viewPlaybook('league-city')">
+                <div class="store-header">
+                    <div class="store-name">League City, TX</div>
+                    <div class="store-badge">Top 5%</div>
+                </div>
+                <div class="store-score">94.0%</div>
+                <div class="score-label">Task Completion</div>
+                <div class="metric-row">
+                    <div class="metric-name">On-Time Rate</div>
+                    <div class="metric-value">88.4%</div>
+                </div>
+                <div class="metric-row">
+                    <div class="metric-name">Team Engagement</div>
+                    <div class="metric-value">High</div>
+                </div>
+                <div class="metric-row">
+                    <div class="metric-name">Store Type</div>
+                    <div class="metric-value">Similar to yours</div>
+                </div>
+            </div>
+
+            <div class="store-card" onclick="viewPlaybook('concord')">
+                <div class="store-header">
+                    <div class="store-name">Concord, NC</div>
+                    <div class="store-badge">Top 5%</div>
+                </div>
+                <div class="store-score">93.8%</div>
+                <div class="score-label">Task Completion</div>
+                <div class="metric-row">
+                    <div class="metric-name">On-Time Rate</div>
+                    <div class="metric-value">87.9%</div>
+                </div>
+                <div class="metric-row">
+                    <div class="metric-name">Inventory Control</div>
+                    <div class="metric-value">93%</div>
+                </div>
+                <div class="metric-row">
+                    <div class="metric-name">Key Strength</div>
+                    <div class="metric-value">Back-of-house</div>
+                </div>
+            </div>
+
+            <div class="store-card" onclick="viewPlaybook('charlotte')">
+                <div class="store-header">
+                    <div class="store-name">Charlotte, NC</div>
+                    <div class="store-badge">Top 5%</div>
+                </div>
+                <div class="store-score">93.5%</div>
+                <div class="score-label">Task Completion</div>
+                <div class="metric-row">
+                    <div class="metric-name">Visual Merch</div>
+                    <div class="metric-value">100%</div>
+                </div>
+                <div class="metric-row">
+                    <div class="metric-name">Survey Compliance</div>
+                    <div class="metric-value">96%</div>
+                </div>
+                <div class="metric-row">
+                    <div class="metric-name">Team Size</div>
+                    <div class="metric-value">Similar to yours</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="playbook-section">
+            <div class="gap-callout">
+                <div class="gap-stat">+5.7pts</div>
+                <div class="gap-text">These stores execute 5.7 percentage points better than your current performance. That difference is the gap between missing your bonus and earning it.</div>
+            </div>
+
+            <div class="playbook-title">What Model Stores Do Differently</div>
+
+            <div class="playbook-item" onclick="viewDetail('morning-routine')">
+                <div class="playbook-item-title">🌅 Morning Task Review (Before Store Opens)</div>
+                <div class="playbook-item-desc">League City TX: Manager reviews task list at 8:45am every day. Assigns owners, sets 2-hour completion windows, flags blockers. Takes 10 minutes. Results in 88%+ on-time completion.</div>
+            </div>
+
+            <div class="playbook-item" onclick="viewDetail('rotation')">
+                <div class="playbook-item-title">🔄 Weekly Back-of-House Owner Rotation</div>
+                <div class="playbook-item-desc">Concord NC: Rotates inventory control ownership weekly. Builds skills across the team, prevents burnout, maintains 93% completion rate on inventory tasks.</div>
+            </div>
+
+            <div class="playbook-item" onclick="viewDetail('huddle')">
+                <div class="playbook-item-title">📣 Daily Huddle Task Accountability</div>
+                <div class="playbook-item-desc">Charlotte NC: 5-minute team huddle at 10am. Reviews yesterday's completion %, calls out wins, assigns today's priorities. Team knows what's expected before floor opens.</div>
+            </div>
+
+            <div class="playbook-item" onclick="viewDetail('engagement')">
+                <div class="playbook-item-title">💬 Manager Engagement Sets the Tone</div>
+                <div class="playbook-item-desc">All three stores: Manager reacts to every team post within 2 hours, comments weekly, shares team wins publicly. High engagement = high execution (proven 3.2pt lift).</div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function viewPlaybook(store) {
+            const stores = {
+                'league-city': 'Opening League City TX playbook...\n\n✓ 8:45am task review (daily)\n✓ 2-hour completion windows\n✓ Manager assigns + tracks\n✓ Team huddle at 10am\n✓ High engagement (manager active on posts)',
+                'concord': 'Opening Concord NC playbook...\n\n✓ Weekly inventory owner rotation\n✓ Protected back-of-house time blocks\n✓ Visual merch + inventory parity\n✓ Manager checks in at 2pm daily\n✓ 93% inventory control rate',
+                'charlotte': 'Opening Charlotte NC playbook...\n\n✓ 100% visual merch execution\n✓ Daily 5-min huddle at 10am\n✓ Public recognition for wins\n✓ 96% survey compliance\n✓ Team accountability culture'
+            };
+            alert(stores[store]);
+        }
+
+        function viewDetail(practice) {
+            const details = {
+                'morning-routine': 'Morning Task Review Implementation:\n\n1. Set recurring 8:45am alarm\n2. Pull up WorkJam task list\n3. Assign owner to each task\n4. Set completion deadline (2-hour window)\n5. Flag any blockers to address\n\nTakes 10 minutes. Results in 88%+ on-time.',
+                'rotation': 'Weekly Rotation Strategy:\n\nMonday: Team member A owns inventory\nTuesday-Wednesday: Team member B\nThursday-Friday: Team member C\n\nBuilds skills, prevents burnout, maintains quality.',
+                'huddle': 'Daily Huddle Format (5 minutes):\n\n1. Yesterday completion % (30 sec)\n2. Call out 2 wins (1 min)\n3. Today\'s 3 priorities (2 min)\n4. Any blockers? (1.5 min)\n\nTeam aligned before floor opens.',
+                'engagement': 'Manager Engagement Checklist:\n\n□ React to all team posts within 2 hours\n□ Comment on posts weekly\n□ Share wins publicly\n□ Acknowledge survey responses\n\nHigh engagement = +3.2pts execution lift.'
+            };
+            alert(details[practice]);
+        }
+    </script>
+</body>
+</html>

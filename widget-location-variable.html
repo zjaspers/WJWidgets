@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Location Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="theme-navy">
+    <div class="location-widget">
+        <div class="widget-header">
+            <div class="header-label">Location Dashboard</div>
+            <div class="header-title" id="locationName">Loading...</div>
+            <div class="location-id-badge">
+                ID: <span id="locationIdDisplay">--</span>
+            </div>
+        </div>
+
+        <div class="content-section">
+            <div class="stat-grid">
+                <div class="stat-card">
+                    <div class="stat-value" id="taskCompletion">92</div>
+                    <div class="stat-label">Task Health</div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-value" id="storeScore">88</div>
+                    <div class="stat-label">Store Score</div>
+                </div>
+            </div>
+
+            <div class="info-box">
+                <div class="info-row">
+                    <div class="info-label">Location ID</div>
+                    <div class="info-value" id="locationIdValue">--</div>
+                </div>
+                <div class="info-row">
+                    <div class="info-label">Location Code</div>
+                    <div class="info-value" id="locationCodeValue">--</div>
+                </div>
+                <div class="info-row">
+                    <div class="info-label">Region</div>
+                    <div class="info-value" id="regionValue">--</div>
+                </div>
+                <div class="info-row">
+                    <div class="info-label">Employee ID</div>
+                    <div class="info-value" id="employeeIdValue">--</div>
+                </div>
+            </div>
+
+            <div class="debug-section">
+                <div class="debug-title">🔍 URL Parameters Detected</div>
+                <div id="debugOutput">
+                    <div class="debug-item">Loading parameters...</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Get URL parameters (from WorkJam variables)
+        const urlParams = new URLSearchParams(window.location.search);
+        
+        // Extract all possible WorkJam variables
+        const locationId = urlParams.get('locationId') || urlParams.get('externalLocationId') || '711/QLD/QLD002/A534/9999';
+        const locationCode = urlParams.get('locationCode') || urlParams.get('externalLocationCode') || 'QLD002';
+        const regionId = urlParams.get('regionId') || urlParams.get('externalRegionId') || 'QLD';
+        const employeeId = urlParams.get('employeeId') || 'EMP-12345';
+        const city = urlParams.get('city') || 'Brisbane';
+        const zipCode = urlParams.get('zipCode') || '4000';
+
+        // Simulate location data lookup
+        const locationData = {
+            '711/QLD/QLD002/A534/9999': {
+                name: '7-Eleven Brisbane QLD002',
+                taskCompletion: 96,
+                storeScore: 91
+            },
+            '30110': {
+                name: 'Melbourne CBD Store',
+                taskCompletion: 94,
+                storeScore: 89
+            },
+            'default': {
+                name: `Location ${locationId}`,
+                taskCompletion: 92,
+                storeScore: 88
+            }
+        };
+
+        // Get location-specific data or use default
+        const currentLocation = locationData[locationId] || locationData['default'];
+
+        // Update UI with location data
+        document.getElementById('locationName').textContent = currentLocation.name;
+        document.getElementById('locationIdDisplay').textContent = locationId;
+        document.getElementById('taskCompletion').textContent = currentLocation.taskCompletion;
+        document.getElementById('storeScore').textContent = currentLocation.storeScore;
+
+        // Update info box
+        document.getElementById('locationIdValue').textContent = locationId;
+        document.getElementById('locationCodeValue').textContent = locationCode;
+        document.getElementById('regionValue').textContent = regionId;
+        document.getElementById('employeeIdValue').textContent = employeeId;
+
+        // Debug output - show all URL parameters
+        const debugOutput = document.getElementById('debugOutput');
+        let debugHTML = '';
+        
+        if (urlParams.toString()) {
+            urlParams.forEach((value, key) => {
+                debugHTML += `<div class="debug-item"><span class="debug-key">${key}:</span> ${value}</div>`;
+            });
+        } else {
+            debugHTML = `
+                <div class="debug-item"><span class="debug-key">locationId:</span> ${locationId} (default)</div>
+                <div class="debug-item"><span class="debug-key">locationCode:</span> ${locationCode} (default)</div>
+                <div class="debug-item"><span class="debug-key">regionId:</span> ${regionId} (default)</div>
+                <div class="debug-item"><span class="debug-key">employeeId:</span> ${employeeId} (default)</div>
+                <div class="debug-item" style="margin-top: 8px; padding-top: 8px; border-top: 1px solid #fbbf24;">
+                    ℹ️ <strong>Note:</strong> No URL parameters detected. Using defaults for testing.
+                </div>
+            `;
+        }
+        
+        debugOutput.innerHTML = debugHTML;
+
+        // Log to console for debugging
+        console.log('Widget loaded with parameters:', {
+            locationId,
+            locationCode,
+            regionId,
+            employeeId,
+            city,
+            zipCode
+        });
+    </script>
+</body>
+</html>
