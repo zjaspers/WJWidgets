@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>C-Store Analytics</title>
+    
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="theme-light">
+    <div class="dashboard-container">
+        <div class="dashboard-header">
+            <h1 class="dashboard-title">C-Store Analytics Dashboard</h1>
+            <p class="dashboard-subtitle">Wings & Fuel - Store #1247 - <span id="current-week"></span></p>
+        </div>
+        
+        <div class="metrics-section">
+            <div class="section-label">Fuel Performance</div>
+            <div class="metrics-grid">
+                <div class="metric-tile">
+                    <div class="metric-value success">$142K</div>
+                    <div class="metric-label">Fuel Sales</div>
+                    <div class="metric-change change-positive">↗ 8.2% vs last week</div>
+                </div>
+                
+                <div class="metric-tile">
+                    <div class="metric-value neutral">48,234</div>
+                    <div class="metric-label">Gallons Sold</div>
+                    <div class="metric-change change-positive">↗ 6.7% increase</div>
+                </div>
+                
+                <div class="metric-tile">
+                    <div class="metric-value success">$2.94</div>
+                    <div class="metric-label">Avg Price/Gallon</div>
+                    <div class="metric-change change-positive">↗ $0.04 vs last week</div>
+                </div>
+                
+                <div class="metric-tile">
+                    <div class="metric-value success">$0.42</div>
+                    <div class="metric-label">Fuel Margin/Gallon</div>
+                    <div class="metric-change change-positive">↗ $0.03 vs target</div>
+                </div>
+            </div>
+            
+            <div class="section-label">Inside Store Performance</div>
+            <div class="metrics-grid">
+                <div class="metric-tile">
+                    <div class="metric-value success">$87K</div>
+                    <div class="metric-label">Inside Sales</div>
+                    <div class="metric-change change-positive">↗ 12.4% vs last week</div>
+                </div>
+                
+                <div class="metric-tile">
+                    <div class="metric-value neutral">3,847</div>
+                    <div class="metric-label">Transactions</div>
+                    <div class="metric-change change-positive">↗ 9.3% increase</div>
+                </div>
+                
+                <div class="metric-tile">
+                    <div class="metric-value success">$22.62</div>
+                    <div class="metric-label">Avg Basket Size</div>
+                    <div class="metric-change change-positive">↗ $1.87 vs last week</div>
+                </div>
+                
+                <div class="metric-tile">
+                    <div class="metric-value warning">38%</div>
+                    <div class="metric-label">Fuel-to-Store Conversion</div>
+                    <div class="metric-change change-negative">↓ 2% vs target</div>
+                </div>
+            </div>
+            
+            <div class="section-label">Wings Program Performance</div>
+            <div class="metrics-grid">
+                <div class="metric-tile">
+                    <div class="metric-value success">$18.4K</div>
+                    <div class="metric-label">Wings Sales</div>
+                    <div class="metric-change change-positive">↗ 15.2% vs last week</div>
+                </div>
+                
+                <div class="metric-tile">
+                    <div class="metric-value neutral">847</div>
+                    <div class="metric-label">Wings Orders</div>
+                    <div class="metric-change change-positive">↗ 12.8% increase</div>
+                </div>
+                
+                <div class="metric-tile">
+                    <div class="metric-value success">$21.73</div>
+                    <div class="metric-label">Avg Wings Ticket</div>
+                    <div class="metric-change change-positive">↗ $1.42 vs last week</div>
+                </div>
+                
+                <div class="metric-tile">
+                    <div class="metric-value success">58%</div>
+                    <div class="metric-label">Wings Margin %</div>
+                    <div class="metric-change change-positive">↗ Above target</div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="content-section">
+            <div class="section-grid">
+                <div class="content-block">
+                    <h3 class="block-title">Top Categories - Inside Sales</h3>
+                    <div class="list-item">
+                        <div class="item-name">Hot Food (Wings, Pizza, etc.)</div>
+                        <div class="item-value">$24.2K</div>
+                    </div>
+                    <div class="list-item">
+                        <div class="item-name">Beverages & Fountain</div>
+                        <div class="item-value">$18.7K</div>
+                    </div>
+                    <div class="list-item">
+                        <div class="item-name">Packaged Snacks</div>
+                        <div class="item-value">$14.3K</div>
+                    </div>
+                    <div class="list-item">
+                        <div class="item-name">Tobacco Products</div>
+                        <div class="item-value">$12.8K</div>
+                    </div>
+                    <div class="list-item">
+                        <div class="item-name">Beer & Wine</div>
+                        <div class="item-value">$9.2K</div>
+                    </div>
+                </div>
+                
+                <div class="content-block">
+                    <h3 class="block-title">Fuel Grade Mix</h3>
+                    <div class="list-item">
+                        <div class="item-name">Regular (87)</div>
+                        <div class="item-value">78% / 37.6K gal</div>
+                    </div>
+                    <div class="list-item">
+                        <div class="item-name">Mid-Grade (89)</div>
+                        <div class="item-value">12% / 5.8K gal</div>
+                    </div>
+                    <div class="list-item">
+                        <div class="item-name">Premium (93)</div>
+                        <div class="item-value">8% / 3.9K gal</div>
+                    </div>
+                    <div class="list-item">
+                        <div class="item-name">Diesel</div>
+                        <div class="item-value">2% / 0.9K gal</div>
+                    </div>
+                </div>
+                
+                <div class="content-block">
+                    <h3 class="block-title">Operational Metrics</h3>
+                    <div class="list-item">
+                        <div class="item-content">
+                            <span class="status-indicator status-success"></span>
+                            <span class="item-name">Pump Uptime</span>
+                        </div>
+                        <div class="item-value">99.2%</div>
+                    </div>
+                    <div class="list-item">
+                        <div class="item-content">
+                            <span class="status-indicator status-success"></span>
+                            <span class="item-name">Food Safety Score</span>
+                        </div>
+                        <div class="item-value">98/100</div>
+                    </div>
+                    <div class="list-item">
+                        <div class="item-content">
+                            <span class="status-indicator status-warning"></span>
+                            <span class="item-name">Inventory Variance</span>
+                        </div>
+                        <div class="item-value">1.8%</div>
+                    </div>
+                    <div class="list-item">
+                        <div class="item-content">
+                            <span class="status-indicator status-success"></span>
+                            <span class="item-name">Customer Satisfaction</span>
+                        </div>
+                        <div class="item-value">4.6/5</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="section-grid">
+                <div class="content-block">
+                    <h3 class="block-title">Peak Traffic Hours</h3>
+                    <div class="list-item">
+                        <div class="item-name">6:00 AM - 9:00 AM</div>
+                        <div class="item-value">$42.3K</div>
+                    </div>
+                    <div class="list-item">
+                        <div class="item-name">12:00 PM - 2:00 PM</div>
+                        <div class="item-value">$38.7K</div>
+                    </div>
+                    <div class="list-item">
+                        <div class="item-name">4:00 PM - 7:00 PM</div>
+                        <div class="item-value">$47.2K</div>
+                    </div>
+                    <div class="list-item">
+                        <div class="item-name">Off-Peak Hours</div>
+                        <div class="item-value">$31.8K</div>
+                    </div>
+                </div>
+                
+                <div class="content-block">
+                    <h3 class="block-title">Loyalty Program Performance</h3>
+                    <div class="list-item">
+                        <div class="item-name">Active Members</div>
+                        <div class="item-value">2,847</div>
+                    </div>
+                    <div class="list-item">
+                        <div class="item-name">Loyalty Transactions</div>
+                        <div class="item-value">64%</div>
+                    </div>
+                    <div class="list-item">
+                        <div class="item-name">Avg Spend (Members)</div>
+                        <div class="item-value">$31.40</div>
+                    </div>
+                    <div class="list-item">
+                        <div class="item-name">Avg Spend (Non-Members)</div>
+                        <div class="item-value">$18.20</div>
+                    </div>
+                </div>
+                
+                <div class="content-block">
+                    <h3 class="block-title">Competition & Market</h3>
+                    <div class="list-item">
+                        <div class="item-content">
+                            <span class="status-indicator status-success"></span>
+                            <span class="item-name">Price vs Market</span>
+                        </div>
+                        <div class="item-value">-$0.02</div>
+                    </div>
+                    <div class="list-item">
+                        <div class="item-content">
+                            <span class="status-indicator status-success"></span>
+                            <span class="item-name">Market Share (Est.)</span>
+                        </div>
+                        <div class="item-value">18.4%</div>
+                    </div>
+                    <div class="list-item">
+                        <div class="item-content">
+                            <span class="status-indicator status-warning"></span>
+                            <span class="item-name">Competitor Activity</span>
+                        </div>
+                        <div class="item-value">Medium</div>
+                    </div>
+                    <div class="list-item">
+                        <div class="item-name">Traffic vs Last Year</div>
+                        <div class="item-value">+12.3%</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function getCurrentWeek() {
+            const now = new Date();
+            const start = new Date(now.getFullYear(), 0, 1);
+            const diff = now - start + ((start.getTimezoneOffset() - now.getTimezoneOffset()) * 60 * 1000);
+            const oneWeek = 1000 * 60 * 60 * 24 * 7;
+            const week = Math.floor(diff / oneWeek) + 1;
+            return `Week ${week}`;
+        }
+
+        document.addEventListener('DOMContentLoaded', function() {
+            document.getElementById('current-week').textContent = getCurrentWeek();
+        });
+    </script>
+</body>
+</html>

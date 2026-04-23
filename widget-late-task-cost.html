@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cost of Late Tasks</title>
+    
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="theme-gold">
+    <div class="widget">
+        <div class="header">
+            <div class="header-label">Financial Impact</div>
+            <div class="header-title">The Cost of Late Tasks</div>
+            <div class="header-insight">6,300 tasks completed late across your network. That's not just a quality issue—it's millions of dollars in operational value at risk.</div>
+        </div>
+
+        <div class="impact-hero">
+            <div class="impact-value">$2-4M</div>
+            <div class="impact-label">Annual Value at Risk</div>
+            <div class="impact-detail">Based on late visual merchandising, inventory counts, compliance checks, and promotional executions. Every late task cascades into lost sales, shrink, or compliance penalties.</div>
+        </div>
+
+        <div class="breakdown-section">
+            <div class="breakdown-title">What's Driving the Problem</div>
+
+            <div class="stat-grid">
+                <div class="stat-card">
+                    <div class="stat-value">6,300</div>
+                    <div class="stat-label">Tasks Completed Late</div>
+                    <div class="stat-context">Network-wide across all stores in past 30 days</div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-value">7.3pts</div>
+                    <div class="stat-label">On-Time Gap</div>
+                    <div class="stat-context">Current: 85.4% vs Target: 92.7%</div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-value">303</div>
+                    <div class="stat-label">At-Risk Stores</div>
+                    <div class="stat-context">Contributing majority of late completions</div>
+                </div>
+            </div>
+
+            <div class="calculation-box">
+                <div class="calc-title">💰 How We Calculate the Cost</div>
+                <div class="calc-step">
+                    <div class="calc-label">Late visual merch tasks (avg $450 lost sales each)</div>
+                    <div class="calc-value">~$900K</div>
+                </div>
+                <div class="calc-step">
+                    <div class="calc-label">Late inventory tasks (shrink + stockouts)</div>
+                    <div class="calc-value">~$1.2M</div>
+                </div>
+                <div class="calc-step">
+                    <div class="calc-label">Late promotional execution (missed revenue)</div>
+                    <div class="calc-value">~$600K</div>
+                </div>
+                <div class="calc-step">
+                    <div class="calc-label">Late compliance tasks (audit penalties)</div>
+                    <div class="calc-value">~$300K</div>
+                </div>
+                <div class="calc-step">
+                    <div class="calc-label"><strong>Total Annual Impact</strong></div>
+                    <div class="calc-value"><strong>$2-4M</strong></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="actions">
+            <div class="action-card" onclick="viewAction('focus')">
+                <div class="action-priority">Quick Win</div>
+                <div class="action-title">Focus on the 303 At-Risk Stores First</div>
+                <div class="action-desc">21.7% of stores contribute 60%+ of late tasks. A focused 30-day recovery playbook on these stores yields disproportionate impact.</div>
+            </div>
+
+            <div class="action-card" onclick="viewAction('timing')">
+                <div class="action-priority">Process Fix</div>
+                <div class="action-title">Set 2-Hour Completion Windows</div>
+                <div class="action-desc">Model stores assign tasks with specific windows (e.g., "Complete by 2pm"). Vague deadlines = late completions. Clear windows = 88%+ on-time rate.</div>
+            </div>
+
+            <div class="action-card" onclick="viewAction('accountability')">
+                <div class="action-priority">Culture Shift</div>
+                <div class="action-title">Daily Manager Check-In at 2pm</div>
+                <div class="action-desc">Catch overdue tasks while there's still time to complete them same-day. 10-minute intervention prevents overnight carries.</div>
+            </div>
+
+            <div class="action-card" onclick="viewAction('incentive')">
+                <div class="action-priority">Motivation</div>
+                <div class="action-title">Tie On-Time % to Store Bonuses</div>
+                <div class="action-desc">Model stores with 88%+ on-time rate execute 3.2pts better overall. Make on-time completion a weighted metric in performance scorecards.</div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function viewAction(actionId) {
+            const actions = {
+                'focus': 'At-Risk Store Recovery Plan:\n\nPhase 1: Identify 303 stores below 81% completion\nPhase 2: District leader site visits (top 20 worst)\nPhase 3: Launch 30-day recovery playbook\nPhase 4: Track weekly improvement to 85%+ target\n\nEstimated impact: $1.2-1.8M recovered value',
+                'timing': 'Completion Window Implementation:\n\nBefore: "Complete this week"\nAfter: "Complete by 2pm today"\n\nManager assigns task at 9am → 2pm deadline\nTeam knows exact window → prioritizes accordingly\nManager checks at 2pm → catches stragglers\n\nResult: 88%+ on-time completion',
+                'accountability': 'Daily 2pm Check-In Protocol:\n\n1. Pull up WorkJam task list\n2. Filter by "Due Today"\n3. Identify incomplete tasks\n4. Text/call assignee immediately\n5. Escalate blockers or reassign\n\nTakes 10 minutes. Prevents overnight carries.',
+                'incentive': 'Performance Scorecard Update:\n\nCurrent weightings:\n- Sales: 40%\n- Customer satisfaction: 30%\n- Shrink: 20%\n- Other: 10%\n\nProposed:\n- Sales: 35%\n- Customer satisfaction: 25%\n- Shrink: 15%\n- On-Time Task Completion: 15%\n- Other: 10%'
+            };
+            alert(actions[actionId]);
+        }
+    </script>
+</body>
+</html>

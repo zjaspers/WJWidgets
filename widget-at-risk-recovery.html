@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>At-Risk Store Recovery</title>
+    
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="theme-red">
+    <div class="widget">
+        <div class="header">
+            <div class="header-label">Critical Action Required</div>
+            <div class="header-title">At-Risk Store Recovery</div>
+            <div class="header-stat">303</div>
+            <div class="header-insight">21.7% of your network is both disengaged and underperforming. Each represents a location where WorkJam isn't working yet—and significant upside if you can turn them around.</div>
+        </div>
+
+        <div class="problem-section">
+            <div class="problem-title">⚠️ The Problem</div>
+            <div class="problem-grid">
+                <div class="problem-card">
+                    <div class="problem-value">81.4%</div>
+                    <div class="problem-label">Task Completion</div>
+                </div>
+                <div class="problem-card">
+                    <div class="problem-value">72.6%</div>
+                    <div class="problem-label">On-Time Rate</div>
+                </div>
+                <div class="problem-card">
+                    <div class="problem-value">Low</div>
+                    <div class="problem-label">Engagement</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="examples-section">
+            <div class="examples-title">Specific Stores Needing Immediate Attention</div>
+
+            <div class="example-store">
+                <div class="example-name">Tarpon Springs, FL</div>
+                <div class="example-metrics">
+                    <div>Task Completion: <span class="example-metric">0%</span></div>
+                    <div>Status: <span class="example-metric">Critical</span></div>
+                </div>
+            </div>
+
+            <div class="example-store">
+                <div class="example-name">Homestead, PA</div>
+                <div class="example-metrics">
+                    <div>Task Completion: <span class="example-metric">11%</span></div>
+                    <div>Status: <span class="example-metric">Critical</span></div>
+                </div>
+            </div>
+
+            <div class="example-store">
+                <div class="example-name">District 7 - Southeast Region</div>
+                <div class="example-metrics">
+                    <div>Average Completion: <span class="example-metric">21%</span></div>
+                    <div>At-Risk Count: <span class="example-metric">47 stores</span></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="recovery-plan">
+            <div class="plan-title">30-Day Recovery Playbook</div>
+
+            <div class="week-card" onclick="viewWeek(1)">
+                <div class="week-header">
+                    <div class="week-label">Week 1</div>
+                    <div class="week-goal">Goal: 50%</div>
+                </div>
+                <div class="week-title">Diagnose & Stabilize</div>
+                <div class="week-actions">• District leader site visit to Tarpon Springs & Homestead<br>• Interview manager + 3 team members<br>• Identify blockers (tech access? training? staffing?)<br>• Set one simple daily task: morning team check-in</div>
+            </div>
+
+            <div class="week-card" onclick="viewWeek(2)">
+                <div class="week-header">
+                    <div class="week-label">Week 2</div>
+                    <div class="week-goal">Goal: 65%</div>
+                </div>
+                <div class="week-title">Build Basic Execution Rhythm</div>
+                <div class="week-actions">• Manager assigns 3 tasks daily (visual merch priority)<br>• Daily 5-min huddle to review task list<br>• District leader checks in via WorkJam daily<br>• Celebrate first week above 50%</div>
+            </div>
+
+            <div class="week-card" onclick="viewWeek(3)">
+                <div class="week-header">
+                    <div class="week-label">Week 3</div>
+                    <div class="week-goal">Goal: 75%</div>
+                </div>
+                <div class="week-title">Increase Complexity & Engagement</div>
+                <div class="week-actions">• Add back-of-house tasks (inventory control)<br>• Manager reacts to all team posts<br>• Launch weekly team survey<br>• Pair with nearby Model Store for peer coaching</div>
+            </div>
+
+            <div class="week-card" onclick="viewWeek(4)">
+                <div class="week-header">
+                    <div class="week-label">Week 4</div>
+                    <div class="week-goal">Goal: 85%+</div>
+                </div>
+                <div class="week-title">Sustain & Scale</div>
+                <div class="week-actions">• Full task load (visual + inventory + compliance)<br>• Manager runs independent daily routine<br>• Team engagement normalized<br>• Share success story with district as recovery model</div>
+            </div>
+
+            <div class="impact-box">
+                <div class="impact-stat">+11.3pts</div>
+                <div class="impact-text">Moving one store from At-Risk (81.4%) to network average (92.7%) = 11.3pt improvement. At scale across 303 stores, that's transformational for your network performance.</div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function viewWeek(week) {
+            const details = {
+                1: 'Week 1 Detailed Actions:\n\nMonday: District leader schedules site visits\nTuesday: On-site at Tarpon Springs (full day)\nWednesday: On-site at Homestead (full day)\nThursday: Debrief + create recovery plan\nFriday: Launch simple daily check-in task\n\nGoal: Understand root cause, stabilize to 50%',
+                2: 'Week 2 Detailed Actions:\n\nDaily: Manager assigns 3 visual merch tasks\nDaily: 5-min team huddle at 9am\nDaily: District leader checks WorkJam feed\nFriday: Celebrate hitting 50%+ completion\n\nGoal: Build basic rhythm, hit 65%',
+                3: 'Week 3 Detailed Actions:\n\nMonday: Add 2 inventory control tasks\nDaily: Manager engagement (reactions + comments)\nWednesday: Launch weekly team survey\nFriday: Video call with Model Store peer\n\nGoal: Increase load + engagement, hit 75%',
+                4: 'Week 4 Detailed Actions:\n\nMonday: Full task load activated\nDaily: Manager runs routine independently\nWednesday: Team engagement review\nFriday: Success story shared with district\n\nGoal: Self-sufficient execution, hit 85%+'
+            };
+            alert(details[week]);
+        }
+    </script>
+</body>
+</html>

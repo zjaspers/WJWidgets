@@ -1,0 +1,582 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+:root {
+    --wj-navy:#2B3990;
+    --wj-teal:#07A387;
+    --wj-gold:#C3A427;
+    --wj-light:#A5B0D0;
+    --bg:#F2F4F8;
+    --surface:#FFFFFF;
+    --surface-alt:#F7F9FC;
+    --border:#E2E7F0;
+    --text-primary:#1A1A2E;
+    --text-sec:#4B5373;
+    --text-muted:#8892AC;
+    --green:#07A387;
+    --green-bg:#D0F0EA;
+    --amber:#C3A427;
+    --amber-bg:#FDF3CE;
+    --red:#C0392B;
+    --red-bg:#FAD4D0;
+    --blue-bg:#E8EEFF;
+    --shadow-sm:0 1px 4px rgba(43,57,144,0.07);
+    --shadow-md:0 4px 16px rgba(43,57,144,0.10);
+    --shadow-lg:0 8px 32px rgba(43,57,144,0.12);
+    --radius:12px;
+    --radius-sm:8px;
+}
+
+* { box-sizing:border-box; margin:0; padding:0; }
+html, body { width:100%; }
+body {
+    font-family:'Inter', sans-serif;
+    background:transparent;
+    color:var(--text-primary);
+    padding:0;
+    margin:0;
+    min-width:220px;
+    max-width:900px;
+    overflow-x:hidden;
+    line-height:1.5;
+    font-size:14px;
+}
+a { color:inherit; }
+
+.widget,
+.dashboard-container,
+.dashboard-widget,
+.widget-container {
+    min-width:220px;
+    max-width:900px;
+    width:100%;
+    margin:0;
+    background:var(--surface);
+    border-radius:0;
+    overflow:hidden;
+    box-shadow:none;
+    border:none;
+}
+
+/* Header system */
+.header,
+.dashboard-header,
+.widget-header {
+    padding:16px;
+    color:#fff;
+    background:var(--wj-navy);
+    border-bottom:none;
+    box-shadow:none;
+}
+
+body.theme-red .header,
+body.theme-red .dashboard-header,
+body.theme-red .widget-header { background:var(--red); }
+body.theme-green .header,
+body.theme-green .dashboard-header,
+body.theme-green .widget-header { background:var(--wj-teal); }
+body.theme-gold .header,
+body.theme-gold .dashboard-header,
+body.theme-gold .widget-header { background:var(--wj-gold); }
+body.theme-light .dashboard-header,
+body.theme-light .widget-header,
+body.theme-light .header {
+    background:var(--surface);
+    color:var(--text-primary);
+    border-bottom:1px solid var(--border);
+}
+
+.header-title,
+.dashboard-title,
+.widget-title,
+.block-title,
+.week-title,
+.action-title,
+.example-name,
+.store-name {
+    font-size:18px;
+    font-weight:800;
+    letter-spacing:-0.3px;
+    color:inherit;
+    margin-bottom:3px;
+}
+
+.dashboard-title,
+.widget-title {
+    margin-bottom:4px;
+}
+
+.header-subtitle,
+.dashboard-subtitle,
+.widget-subtitle,
+.header-insight,
+.footer-info,
+.store-address,
+.target-label,
+.actual-label,
+.header-label,
+.section-label,
+.header-subtitle {
+    font-size:12px;
+    font-weight:500;
+    color:inherit;
+    opacity:.9;
+}
+
+body.theme-light .dashboard-subtitle,
+body.theme-light .widget-subtitle,
+body.theme-light .header-subtitle,
+body.theme-light .header-insight,
+body.theme-light .header-label,
+body.theme-light .section-label {
+    color:var(--text-sec);
+    opacity:1;
+}
+
+.header-label,
+.section-label,
+.problem-title,
+.examples-title,
+.plan-title,
+.breakdown-title,
+.calc-title,
+.action-priority,
+.tasks-title,
+.upcoming-title,
+.section-title,
+.week-label,
+.store-status,
+.summary-label,
+.metric-label,
+.item-label,
+.city-label,
+.region-badge,
+.target-period,
+.health-score-label,
+.widget-subtitle,
+.block-title,
+.target-label,
+.actual-label,
+.opportunity-category,
+.task-status {
+    text-transform:uppercase;
+    letter-spacing:.8px;
+}
+
+/* Sections */
+.section,
+.metrics-section,
+.problem-section,
+.examples-section,
+.recovery-plan,
+.summary-section,
+.stores-section,
+.action-section,
+.breakdown-section,
+.actions,
+.content-section,
+.health-section,
+.footer-section,
+.metrics-grid,
+.metrics-section,
+.metrics-grid,
+.metrics-section {
+    padding:16px;
+}
+
+.metrics-grid,
+.section-grid,
+.problem-grid,
+.summary-grid,
+.stat-grid,
+.task-metrics-grid,
+.store-issues {
+    display:grid;
+    gap:16px;
+}
+.metrics-grid { grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); }
+.section-grid { grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); }
+.problem-grid, .summary-grid, .stat-grid { grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); }
+.task-metrics-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.store-issues { grid-template-columns: repeat(3, minmax(0, 1fr)); gap:8px; }
+
+/* Cards */
+.card,
+.metric-card,
+.metric-tile,
+.content-block,
+.problem-card,
+.summary-card,
+.store-card,
+.week-card,
+.stat-card,
+.action-card,
+.issue-badge,
+.example-store,
+.impact-box,
+.at-risk-section,
+.upcoming-section,
+.variance-display,
+.calculation-box,
+.health-score,
+.target-display,
+.actual-display {
+    background:var(--surface);
+    border-radius:var(--radius);
+    padding:14px;
+    border:2px solid var(--border);
+    box-shadow:var(--shadow-sm);
+}
+
+.success-card,
+.metric-card.success,
+.health-score,
+.impact-box,
+.upcoming-section { border-color:var(--green); background:var(--green-bg); }
+.warning-card,
+.metric-card.warning,
+.calculation-box { border-color:var(--amber); background:var(--amber-bg); }
+.error-card,
+.metric-card.critical,
+.at-risk-section,
+.variance-display,
+.example-store,
+.store-card.critical,
+.problem-section,
+.summary-section { border-color:var(--red); background:var(--red-bg); }
+
+/* Buttons */
+.button,
+.action-button,
+.footer-link,
+.footer-link a {
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    gap:8px;
+    padding:12px 16px;
+    background:var(--wj-navy);
+    color:#fff;
+    border-radius:8px;
+    font-size:13px;
+    font-weight:700;
+    border:none;
+    box-shadow:var(--shadow-sm);
+    text-decoration:none;
+}
+.action-button { display:flex; width:100%; }
+.action-button.secondary { background:var(--wj-teal); }
+body.theme-red .action-button,
+body.theme-red .footer-link,
+body.theme-red .footer-link a { background:var(--red); }
+body.theme-gold .action-button,
+body.theme-gold .footer-link,
+body.theme-gold .footer-link a { background:var(--wj-gold); }
+body.theme-green .action-button.secondary { background:var(--wj-navy); }
+
+/* Typography and metrics */
+.metric-value,
+.header-stat,
+.summary-value,
+.stat-value,
+.impact-value,
+.impact-stat,
+.health-score-value,
+.target-value,
+.actual-value,
+.problem-value,
+.issue-count,
+.week-goal,
+.risk-percent,
+.target-percentage,
+.item-value,
+.opportunity-value,
+.metric-value.success,
+.metric-value.critical,
+.metric-value.warning,
+.metric-value.green,
+.metric-value.blue,
+.metric-value.purple,
+.metric-value.neutral {
+    font-family:'Inter', sans-serif;
+    font-weight:800;
+    line-height:1;
+    letter-spacing:-2px;
+    color:var(--wj-navy);
+    text-shadow:none;
+}
+.metric-value { font-size:40px; }
+.header-stat { font-size:72px; margin:12px 0; color:#fff; }
+.summary-value,
+.stat-value,
+.impact-stat,
+.target-value,
+.actual-value { font-size:40px; }
+.impact-value { font-size:64px; color:var(--wj-gold); }
+.health-score-value { font-size:48px; color:var(--green); }
+.problem-value, .issue-count { font-size:32px; }
+.week-goal, .metric-value.success, .target-percentage.success, .trend-up { color:var(--green); }
+.metric-value.warning, .target-percentage.warning, .change-negative, .status-warning, .opportunity-value { color:var(--amber); }
+.metric-value.critical, .risk-percent, .summary-value, .problem-value, .issue-count, .target-percentage.critical, .trend-down { color:var(--red); }
+.metric-value.blue, .metric-value.purple, .metric-value.neutral, .item-value, .calc-value { color:var(--wj-navy); }
+.trend-neutral { color:var(--text-muted); }
+
+.metric-label,
+.problem-label,
+.summary-label,
+.item-name,
+.item-value,
+.target-label,
+.actual-label,
+.target-label,
+.actual-label,
+.target-period,
+.target-display,
+.actual-display,
+.risk-region,
+.task-name,
+.upcoming-task,
+.upcoming-dept,
+.metric-sublabel,
+.stat-context,
+.action-desc,
+.week-actions,
+.impact-text,
+.impact-detail,
+.variance-text,
+.calc-label,
+.store-address,
+.opportunity-category,
+.task-completion,
+.task-meta,
+.item-name,
+.risk-region,
+.task-name,
+.week-actions,
+.header-insight,
+.widget-subtitle,
+.dashboard-subtitle,
+.problem-title,
+.examples-title,
+.plan-title,
+.breakdown-title,
+.block-title,
+.list-item,
+.sales-target {
+    color:var(--text-sec);
+}
+
+.metric-label,
+.problem-label,
+.summary-label,
+.metric-sublabel,
+.task-status,
+.issue-label,
+.upcoming-title,
+.tasks-title,
+.problem-title,
+.examples-title,
+.plan-title,
+.breakdown-title,
+.calc-title,
+.action-priority,
+.section-label,
+.city-label,
+.region-badge,
+.store-status,
+.health-score-label {
+    font-size:12px;
+    font-weight:700;
+}
+.metric-sublabel, .task-completion, .week-label, .issue-label { font-size:11px; }
+.action-priority { color:var(--text-sec); margin-bottom:8px; }
+
+/* Lists and rows */
+.list-item,
+.task-item,
+.risk-item,
+.opportunity-item,
+.sales-target,
+.upcoming-item,
+.calc-step,
+.store-header,
+.item-content,
+.target-progress,
+.week-header,
+.section-header,
+.widget-header,
+.widget-title,
+.widget-header,
+.task-item,
+.risk-item {
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:12px;
+}
+
+.list-item,
+.task-item,
+.risk-item,
+.opportunity-item,
+.sales-target,
+.upcoming-item,
+.calc-step {
+    padding:12px 0;
+    border-bottom:1px solid var(--border);
+}
+.list-item:last-child,
+.task-item:last-child,
+.risk-item:last-child,
+.opportunity-item:last-child,
+.sales-target:last-child,
+.upcoming-item:last-child,
+.calc-step:last-child { border-bottom:none; }
+
+.item-content { justify-content:flex-start; }
+.item-rank { width:20px; text-align:center; font-size:14px; }
+.status-indicator { width:8px; height:8px; border-radius:50%; margin-right:8px; display:inline-block; }
+.status-critical { background:var(--red); }
+.status-success { background:var(--green); }
+.status-warning { background:var(--amber); }
+
+.task-status {
+    padding:4px 8px;
+    border-radius:6px;
+    font-size:10px;
+    font-weight:700;
+}
+.status-overdue { background:var(--red-bg); color:var(--red); }
+.status-active { background:var(--blue-bg); color:var(--wj-navy); }
+.status-completed { background:var(--green-bg); color:var(--green); }
+
+/* Widget-specific adjustments */
+.region-badge,
+.city-label {
+    display:inline-block;
+    padding:4px 8px;
+    border-radius:8px;
+    background:rgba(255,255,255,.2);
+}
+body.theme-light .region-badge,
+body.theme-light .city-label { background:var(--surface-alt); color:var(--text-sec); }
+
+.store-card, .week-card, .action-card, .metric-card, .content-block {
+    transition:border-color .2s ease, box-shadow .2s ease, transform .2s ease;
+}
+.store-card:hover, .week-card:hover, .action-card:hover, .metric-card:hover, .content-block.clickable:hover {
+    transform:translateY(-1px);
+    box-shadow:var(--shadow-md);
+    border-color:var(--wj-navy);
+}
+body.theme-red .store-card:hover,
+body.theme-red .week-card:hover,
+body.theme-red .action-card:hover,
+body.theme-red .content-block.clickable:hover { border-color:var(--red); }
+body.theme-green .metric-card:hover,
+body.theme-green .action-card:hover { border-color:var(--green); }
+body.theme-gold .action-card:hover { border-color:var(--amber); }
+
+.content-section, .footer-section, .action-section, .recovery-plan { background:var(--surface-alt); }
+.problem-section, .summary-section, .impact-hero { background:var(--surface-alt); }
+.impact-hero { text-align:center; padding:16px; }
+.health-score { text-align:center; }
+.footer-section { text-align:center; }
+.widget-header .widget-title { display:flex; align-items:center; gap:8px; }
+
+.performance-bar,
+.progress-bar {
+    width:100%;
+    height:12px;
+    background:var(--border);
+    border-radius:999px;
+    overflow:hidden;
+    position:relative;
+}
+.bar-fill,
+.progress-fill {
+    height:100%;
+    background:var(--wj-navy);
+    border-radius:999px;
+}
+.progress-fill.success { background:var(--green); }
+.progress-fill.warning { background:var(--amber); }
+.progress-fill.critical { background:var(--red); }
+.bar-target-line {
+    position:absolute;
+    top:0;
+    bottom:0;
+    width:2px;
+    background:var(--green);
+}
+.bar-target-label {
+    position:absolute;
+    top:-20px;
+    transform:translateX(-50%);
+    font-size:11px;
+    color:var(--text-sec);
+    font-weight:700;
+}
+.last-updated, .footer-info {
+    padding:12px 16px;
+    background:var(--surface-alt);
+    border-top:1px solid var(--border);
+    text-align:center;
+    font-size:12px;
+    color:var(--text-sec);
+}
+
+body.theme-red .header-stat,
+body.theme-gold .header-stat,
+body.theme-green .header-stat { color:#fff; }
+body.theme-red .summary-card,
+body.theme-red .issue-badge { border-color:var(--red); }
+body.theme-red .summary-label,
+body.theme-red .store-status,
+body.theme-red .city-label { color:var(--red); }
+body.theme-gold .impact-value,
+body.theme-gold .stat-value,
+body.theme-gold .calc-value { color:var(--amber); }
+body.theme-green .health-score,
+body.theme-green .metric-card:hover::after { color:var(--green); }
+
+.footer-link {
+    margin-top:8px;
+}
+.footer-link a {
+    background:none;
+    box-shadow:none;
+    padding:0;
+    color:inherit;
+}
+.footer-link a:hover { text-decoration:none; }
+
+@media (max-width: 768px) {
+    .metrics-grid { grid-template-columns: repeat(2, minmax(0,1fr)); }
+    .section-grid, .problem-grid, .summary-grid, .stat-grid { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 480px) {
+    .header,
+    .dashboard-header,
+    .widget-header { padding:14px 12px; }
+
+    .section,
+    .metrics-section,
+    .problem-section,
+    .examples-section,
+    .recovery-plan,
+    .summary-section,
+    .stores-section,
+    .action-section,
+    .breakdown-section,
+    .actions,
+    .content-section,
+    .health-section,
+    .footer-section,
+    .metrics-grid { padding:12px; }
+
+    .metric-value { font-size:32px; }
+    .header-stat { font-size:56px; }
+    .impact-value, .health-score-value, .summary-value, .stat-value, .impact-stat, .target-value, .actual-value { font-size:36px; }
+    .task-metrics-grid { grid-template-columns: 1fr; }
+}

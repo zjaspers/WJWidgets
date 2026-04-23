@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DRR Mutilation Impact Widget</title>
+    
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="theme-light">
+    <div class="widget-container">
+        <div class="widget-header">
+            <div class="header-title">DRR Mutilation Impact Tracking</div>
+            <div class="header-subtitle">Week ending July 27th - Lansing Grand River</div>
+        </div>
+        
+        <div class="metrics-section">
+            <div class="target-display">
+                <div class="target-label">Corporate Target</div>
+                <div class="target-value">5%</div>
+            </div>
+            
+            <div class="actual-display">
+                <div class="actual-label">LGR Actual Performance</div>
+                <div class="actual-value" id="actual-value">3.10%</div>
+            </div>
+            
+            <div class="performance-bar">
+                <div class="bar-target-label">Target</div>
+                <div class="bar-target-line"></div>
+                <div class="bar-fill" id="performance-fill"></div>
+            </div>
+            
+            <div class="variance-display">
+                <p class="variance-text">2.10% over corporate target</p>
+            </div>
+            
+            <div class="chart-placeholder">
+                Impact Visualization
+            </div>
+            
+            <div class="week-label">Data for week 2025-7</div>
+        </div>
+        
+        <div class="last-updated">
+            Last updated: <span id="last-update-time"></span>
+        </div>
+    </div>
+
+    <script>
+        // Update last refresh time
+        function updateLastRefreshTime() {
+            const now = new Date();
+            const timeString = now.toLocaleTimeString('en-US', { 
+                hour: 'numeric', 
+                minute: '2-digit',
+                hour12: true 
+            });
+            document.getElementById('last-update-time').textContent = timeString;
+        }
+        
+        // Animate the performance bar based on actual vs target
+        function updatePerformanceBar() {
+            const actual = 3.10;
+            const target = 2.00;
+            const maxScale = 5.00; // Max expected value for scaling
+            
+            const percentage = (actual / maxScale) * 100;
+            document.getElementById('performance-fill').style.width = percentage + '%';
+        }
+        
+        // Simulate data refresh
+        function refreshData() {
+            updateLastRefreshTime();
+            updatePerformanceBar();
+            
+            // Example of how you might update values:
+            // const newActual = fetchLatestDRRData();
+            // document.getElementById('actual-value').textContent = newActual + '%';
+        }
+        
+        // Initialize
+        updateLastRefreshTime();
+        updatePerformanceBar();
+        
+        // Auto-refresh every 5 minutes
+        setInterval(refreshData, 300000);
+    </script>
+</body>
+</html>

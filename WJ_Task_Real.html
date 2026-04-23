@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WorkJam Task Analytics Dashboard</title>
+    
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="theme-light">
+    <div class="dashboard-container">
+        <div class="dashboard-header">
+            <h1 class="dashboard-title">Task Analytics</h1>
+            <p class="dashboard-subtitle">Performance overview for Week 37</p>
+        </div>
+        
+        <div class="metrics-section">
+            <div class="metrics-grid">
+                <div class="metric-card">
+                    <div class="metric-value critical">23%</div>
+                    <div class="metric-label">Completion Rate</div>
+                    <div class="metric-change trend-down">
+                        <span>↓</span>
+                        <span>8% vs target</span>
+                    </div>
+                </div>
+                
+                <div class="metric-card">
+                    <div class="metric-value">1,847</div>
+                    <div class="metric-label">Tasks Assigned</div>
+                    <div class="metric-change trend-up">
+                        <span>↗</span>
+                        <span>12% increase</span>
+                    </div>
+                </div>
+                
+                <div class="metric-card">
+                    <div class="metric-value critical">7</div>
+                    <div class="metric-label">Overdue Tasks</div>
+                    <div class="metric-change trend-up">
+                        <span>↗</span>
+                        <span>2 this week</span>
+                    </div>
+                </div>
+                
+                <div class="metric-card">
+                    <div class="metric-value success">25h</div>
+                    <div class="metric-label">Avg Planned Workload</div>
+                    <div class="metric-change trend-up">
+                        <span>↗</span>
+                        <span>2h this week</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="health-section">
+            <div class="health-score">
+                <div class="health-score-value">47/100</div>
+                <div class="health-score-label">Task Completion Health Score</div>
+            </div>
+        </div>
+        
+        <div class="content-section">
+            <div class="section-grid">
+                <div class="content-block">
+                    <h3 class="block-title">At-Risk Regions</h3>
+                    <div class="risk-item">
+                        <div class="item-content">
+                            <span class="status-indicator status-critical"></span>
+                            <span class="risk-region">Region 3 - Columbus/Cleveland</span>
+                        </div>
+                        <span class="risk-percent">12%</span>
+                    </div>
+                    <div class="risk-item">
+                        <div class="item-content">
+                            <span class="status-indicator status-critical"></span>
+                            <span class="risk-region">Region 4 - Michigan</span>
+                        </div>
+                        <span class="risk-percent">18%</span>
+                    </div>
+                    <div class="risk-item">
+                        <div class="item-content">
+                            <span class="status-indicator status-warning"></span>
+                            <span class="risk-region">Region 7 - Southeast</span>
+                        </div>
+                        <span class="risk-percent">21%</span>
+                    </div>
+                </div>
+                
+                <div class="content-block clickable" onclick="window.open('https://app-next.workjamdemo.com/tasks/calendar', '_blank')">
+                    <h3 class="block-title clickable">📋 Current Active Tasks →</h3>
+                    <div class="task-item">
+                        <div class="task-name">USB-C Charger Recall 2025.09</div>
+                        <div class="task-meta">
+                            <span class="task-completion">42%</span>
+                            <span class="task-status status-overdue">Overdue</span>
+                        </div>
+                    </div>
+                    <div class="task-item">
+                        <div class="task-name">Week 36 Visual SET - Div 3 Kids</div>
+                        <div class="task-meta">
+                            <span class="task-completion">78%</span>
+                            <span class="task-status status-active">Active</span>
+                        </div>
+                    </div>
+                    <div class="task-item">
+                        <div class="task-name">Safety Protocol Update</div>
+                        <div class="task-meta">
+                            <span class="task-completion">89%</span>
+                            <span class="task-status status-completed">Completed</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="content-block">
+                    <h3 class="block-title">Pending Approvals</h3>
+                    <div class="task-item">
+                        <div class="task-name">Back to School Email Campaign</div>
+                        <div class="task-meta">
+                            <span class="task-status status-overdue">Due Today</span>
+                        </div>
+                    </div>
+                    <div class="task-item">
+                        <div class="task-name">Student Discount Program</div>
+                        <div class="task-meta">
+                            <span class="task-status status-active">Review</span>
+                        </div>
+                    </div>
+                    <div class="task-item">
+                        <div class="task-name">BTS Product Mix - Electronics</div>
+                        <div class="task-meta">
+                            <span class="task-status status-active">Pending</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div style="margin-top: 32px;">
+                <div class="section-grid">
+                    <div class="content-block">
+                        <h3 class="block-title">Upcoming Visual Sets (Week 37-38)</h3>
+                        <div class="list-item">
+                            <div class="item-name">Week 37 Visual SET - Home & Garden</div>
+                            <div class="item-value">Region 2 - Illinois</div>
+                        </div>
+                        <div class="list-item">
+                            <div class="item-name">Week 37 Visual SET - Electronics</div>
+                            <div class="item-value">Region 5 - Texas</div>
+                        </div>
+                        <div class="list-item">
+                            <div class="item-name">Week 38 Visual SET - Back to School</div>
+                            <div class="item-value">Region 1 - Northeast</div>
+                        </div>
+                        <div class="list-item">
+                            <div class="item-name">Week 38 Visual SET - Health & Beauty</div>
+                            <div class="item-value">Region 6 - California</div>
+                        </div>
+                    </div>
+                    
+                    <div class="content-block">
+                        <h3 class="block-title">Performance Leaders</h3>
+                        <div class="list-item">
+                            <div class="item-content">
+                                <span class="item-rank">🥇</span>
+                                <span class="item-name">Region 1 - Northeast</span>
+                            </div>
+                            <span class="item-value">94%</span>
+                        </div>
+                        <div class="list-item">
+                            <div class="item-content">
+                                <span class="item-rank">🥈</span>
+                                <span class="item-name">Region 6 - California</span>
+                            </div>
+                            <span class="item-value">87%</span>
+                        </div>
+                        <div class="list-item">
+                            <div class="item-content">
+                                <span class="item-rank">🥉</span>
+                                <span class="item-name">Region 5 - Texas</span>
+                            </div>
+                            <span class="item-value">81%</span>
+                        </div>
+                    </div>
+                    
+                    <div class="content-block">
+                        <h3 class="block-title">Task Completion Trends</h3>
+                        <div class="list-item">
+                            <div class="item-name">Visual Merchandising</div>
+                            <div class="item-value">78%</div>
+                        </div>
+                        <div class="list-item">
+                            <div class="item-name">Safety Protocols</div>
+                            <div class="item-value">65%</div>
+                        </div>
+                        <div class="list-item">
+                            <div class="item-name">Training Modules</div>
+                            <div class="item-value">52%</div>
+                        </div>
+                        <div class="list-item">
+                            <div class="item-name">Inventory Tasks</div>
+                            <div class="item-value">41%</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer-section">
+            <a href="https://app-next.workjamdemo.com/tasks/calendar" target="_blank" class="footer-link">
+                📅 Calendar View
+            </a>
+        </div>
+    </div>
+</body>
+</html>

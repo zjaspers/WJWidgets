@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurant Sales Analytics Dashboard</title>
+    
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="theme-light">
+    <div class="dashboard-container">
+        <div class="dashboard-header">
+            <h1 class="dashboard-title">Restaurant Sales Analytics</h1>
+            <p class="dashboard-subtitle">Buffalo Wings & Grill - September 2025</p>
+        </div>
+        
+        <div class="metrics-section">
+            <div class="metrics-grid">
+                <div class="metric-card">
+                    <div class="metric-value success">$89K</div>
+                    <div class="metric-label">Monthly Revenue</div>
+                    <div class="metric-change trend-up">
+                        <span>↗</span>
+                        <span>5.8% vs last month</span>
+                    </div>
+                </div>
+                
+                <div class="metric-card">
+                    <div class="metric-value">3,247</div>
+                    <div class="metric-label">Total Orders</div>
+                    <div class="metric-change trend-up">
+                        <span>↗</span>
+                        <span>4.2% increase</span>
+                    </div>
+                </div>
+                
+                <div class="metric-card">
+                    <div class="metric-value success">$27.40</div>
+                    <div class="metric-label">Average Check Size</div>
+                    <div class="metric-change trend-up">
+                        <span>↗</span>
+                        <span>$1.20 vs last month</span>
+                    </div>
+                </div>
+                
+                <div class="metric-card">
+                    <div class="metric-value warning">4.2</div>
+                    <div class="metric-label">Table Turns/Day</div>
+                    <div class="metric-change trend-down">
+                        <span>↓</span>
+                        <span>0.3 vs target</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="health-section">
+            <div class="health-score">
+                <div class="health-score-value">78/100</div>
+                <div class="health-score-label">Restaurant Performance Health Score</div>
+            </div>
+        </div>
+        
+        <div class="content-section">
+            <div class="section-grid">
+                <div class="content-block">
+                    <h3 class="block-title">Top Menu Categories</h3>
+                    <div class="list-item">
+                        <div class="item-content">
+                            <span class="item-rank">🥇</span>
+                            <span class="item-name">Wings & Appetizers</span>
+                        </div>
+                        <span class="item-value">$31K</span>
+                    </div>
+                    <div class="list-item">
+                        <div class="item-content">
+                            <span class="item-rank">🥈</span>
+                            <span class="item-name">Burgers & Sandwiches</span>
+                        </div>
+                        <span class="item-value">$23K</span>
+                    </div>
+                    <div class="list-item">
+                        <div class="item-content">
+                            <span class="item-rank">🥉</span>
+                            <span class="item-name">Beverages & Bar</span>
+                        </div>
+                        <span class="item-value">$19K</span>
+                    </div>
+                    <div class="list-item">
+                        <div class="item-content">
+                            <span class="item-rank">4️⃣</span>
+                            <span class="item-name">Entrees & Mains</span>
+                        </div>
+                        <span class="item-value">$12K</span>
+                    </div>
+                    <div class="list-item">
+                        <div class="item-content">
+                            <span class="item-rank">5️⃣</span>
+                            <span class="item-name">Desserts</span>
+                        </div>
+                        <span class="item-value">$4K</span>
+                    </div>
+                </div>
+                
+                <div class="content-block">
+                    <h3 class="block-title">Sales Targets Progress</h3>
+                    <div class="sales-target">
+                        <span class="target-period">Daily Target</span>
+                        <div class="target-progress">
+                            <span class="target-percentage success">108%</span>
+                            <div class="progress-bar">
+                                <div class="progress-fill success" style="width: 100%;"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="sales-target">
+                        <span class="target-period">Weekly Target</span>
+                        <div class="target-progress">
+                            <span class="target-percentage success">96%</span>
+                            <div class="progress-bar">
+                                <div class="progress-fill success" style="width: 96%;"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="sales-target">
+                        <span class="target-period">Monthly Target</span>
+                        <div class="target-progress">
+                            <span class="target-percentage warning">83%</span>
+                            <div class="progress-bar">
+                                <div class="progress-fill warning" style="width: 83%;"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="sales-target">
+                        <span class="target-period">Quarterly Target</span>
+                        <div class="target-progress">
+                            <span class="target-percentage critical">71%</span>
+                            <div class="progress-bar">
+                                <div class="progress-fill critical" style="width: 71%;"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="content-block">
+                    <h3 class="block-title">Daypart Performance</h3>
+                    <div class="list-item">
+                        <div class="item-content">
+                            <span class="status-indicator status-success"></span>
+                            <span class="item-name">Dinner (5PM-9PM)</span>
+                        </div>
+                        <span class="item-value">$47K</span>
+                    </div>
+                    <div class="list-item">
+                        <div class="item-content">
+                            <span class="status-indicator status-success"></span>
+                            <span class="item-name">Lunch (11AM-3PM)</span>
+                        </div>
+                        <span class="item-value">$28K</span>
+                    </div>
+                    <div class="list-item">
+                        <div class="item-content">
+                            <span class="status-indicator status-warning"></span>
+                            <span class="item-name">Happy Hour (3PM-6PM)</span>
+                        </div>
+                        <span class="item-value">$9K</span>
+                    </div>
+                    <div class="list-item">
+                        <div class="item-content">
+                            <span class="status-indicator status-critical"></span>
+                            <span class="item-name">Late Night (9PM-Close)</span>
+                        </div>
+                        <span class="item-value">$5K</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div style="margin-top: 32px;">
+                <div class="section-grid">
+                    <div class="content-block">
+                        <h3 class="block-title">Service Metrics</h3>
+                        <div class="list-item">
+                            <div class="item-name">Average Service Time</div>
+                            <div class="item-value">18.5 min</div>
+                        </div>
+                        <div class="list-item">
+                            <div class="item-name">Order Accuracy Rate</div>
+                            <div class="item-value">94.2%</div>
+                        </div>
+                        <div class="list-item">
+                            <div class="item-name">Customer Wait Time</div>
+                            <div class="item-value">12.3 min</div>
+                        </div>
+                        <div class="list-item">
+                            <div class="item-name">Kitchen Ticket Time</div>
+                            <div class="item-value">14.7 min</div>
+                        </div>
+                    </div>
+                    
+                    <div class="content-block">
+                        <h3 class="block-title">Order Channel Mix</h3>
+                        <div class="list-item">
+                            <div class="item-content">
+                                <span class="status-indicator status-success"></span>
+                                <span class="item-name">Dine-In Orders</span>
+                            </div>
+                            <span class="item-value">67%</span>
+                        </div>
+                        <div class="list-item">
+                            <div class="item-content">
+                                <span class="status-indicator status-warning"></span>
+                                <span class="item-name">Takeout/Pickup</span>
+                            </div>
+                            <span class="item-value">21%</span>
+                        </div>
+                        <div class="list-item">
+                            <div class="item-content">
+                                <span class="status-indicator status-warning"></span>
+                                <span class="item-name">Delivery (DoorDash/Uber)</span>
+                            </div>
+                            <span class="item-value">12%</span>
+                        </div>
+                    </div>
+                    
+                    <div class="content-block">
+                        <h3 class="block-title">Customer Satisfaction</h3>
+                        <div class="list-item">
+                            <div class="item-name">Overall Rating</div>
+                            <div class="item-value">4.3/5</div>
+                        </div>
+                        <div class="list-item">
+                            <div class="item-name">Food Quality</div>
+                            <div class="item-value">4.5/5</div>
+                        </div>
+                        <div class="list-item">
+                            <div class="item-name">Service Speed</div>
+                            <div class="item-value">4.1/5</div>
+                        </div>
+                        <div class="list-item">
+                            <div class="item-name">Repeat Customers</div>
+                            <div class="item-value">42%</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer-section">
+            <a href="https://lookerstudio.google.com/reporting/1dd53bd0-2c89-468f-8aba-a9893c634fae/page/p_kxxqqxe67c" target="_blank" class="footer-link">
+                <span>📊</span>
+                <span>View detailed restaurant analytics</span>
+            </a>
+        </div>
+    </div>
+</body>
+</html>

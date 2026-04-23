@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>At-Risk Stores - Regional View</title>
+    
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="theme-red">
+    <div class="widget">
+        <div class="header">
+            <div class="header-title">🚨 At-Risk Stores</div>
+            <div class="header-subtitle">Regional Manager Dashboard</div>
+            <div class="region-badge" id="region-name">Columbus &amp; Cleveland Region</div>
+        </div>
+
+        <div class="summary-section">
+            <div class="summary-grid">
+                <div class="summary-card">
+                    <div class="summary-value">11</div>
+                    <div class="summary-label">At-Risk Stores</div>
+                </div>
+                <div class="summary-card">
+                    <div class="summary-value">3.2</div>
+                    <div class="summary-label">Avg CSAT Score</div>
+                </div>
+                <div class="summary-card">
+                    <div class="summary-value">23</div>
+                    <div class="summary-label">Failed Audits</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="stores-section">
+            <div class="section-header">
+                <div class="section-title">🔴 Critical - Columbus Area</div>
+                <div class="city-label">5 Stores</div>
+            </div>
+
+            <div class="store-card critical" onclick="openStore('30444')">
+                <div class="store-header">
+                    <div class="store-info">
+                        <div class="store-name">Store #30444 - Polaris</div>
+                        <div class="store-address">2847 Polaris Pkwy, Columbus OH</div>
+                        <div class="store-status">🔴 Critical - 7 overdue items</div>
+                    </div>
+                    <div class="store-metrics">
+                        <div class="metric-value">2.8</div>
+                        <div class="metric-label">CSAT Score</div>
+                    </div>
+                </div>
+                <div class="store-issues">
+                    <div class="issue-badge">
+                        <div class="issue-count">4</div>
+                        <div class="issue-label">Overdue</div>
+                    </div>
+                    <div class="issue-badge">
+                        <div class="issue-count">2</div>
+                        <div class="issue-label">Failed Audits</div>
+                    </div>
+                    <div class="issue-badge">
+                        <div class="issue-count">3</div>
+                        <div class="issue-label">Compliance</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="store-card critical" onclick="openStore('30110')">
+                <div class="store-header">
+                    <div class="store-info">
+                        <div class="store-name">Store #30110 - Easton</div>
+                        <div class="store-address">4128 Morse Rd, Columbus OH</div>
+                        <div class="store-status">🔴 Critical - 6 overdue items</div>
+                    </div>
+                    <div class="store-metrics">
+                        <div class="metric-value">2.9</div>
+                        <div class="metric-label">CSAT Score</div>
+                    </div>
+                </div>
+                <div class="store-issues">
+                    <div class="issue-badge">
+                        <div class="issue-count">6</div>
+                        <div class="issue-label">Overdue</div>
+                    </div>
+                    <div class="issue-badge">
+                        <div class="issue-count">3</div>
+                        <div class="issue-label">Failed Audits</div>
+                    </div>
+                    <div class="issue-badge">
+                        <div class="issue-count">2</div>
+                        <div class="issue-label">Compliance</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="store-card" onclick="openStore('1312')">
+                <div class="store-header">
+                    <div class="store-info">
+                        <div class="store-name">Store #1312 - Hilliard</div>
+                        <div class="store-address">3621 Cemetery Rd, Hilliard OH</div>
+                        <div class="store-status">🟠 High Risk - 4 overdue items</div>
+                    </div>
+                    <div class="store-metrics">
+                        <div class="metric-value">3.4</div>
+                        <div class="metric-label">CSAT Score</div>
+                    </div>
+                </div>
+                <div class="store-issues">
+                    <div class="issue-badge">
+                        <div class="issue-count">4</div>
+                        <div class="issue-label">Overdue</div>
+                    </div>
+                    <div class="issue-badge">
+                        <div class="issue-count">1</div>
+                        <div class="issue-label">Failed Audits</div>
+                    </div>
+                    <div class="issue-badge">
+                        <div class="issue-count">1</div>
+                        <div class="issue-label">Compliance</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="stores-section" style="padding-top: 0;">
+            <div class="section-header">
+                <div class="section-title">🔴 Critical - Cleveland Area</div>
+                <div class="city-label">6 Stores</div>
+            </div>
+
+            <div class="store-card critical" onclick="openStore('2103')">
+                <div class="store-header">
+                    <div class="store-info">
+                        <div class="store-name">Store #2103 - Westlake</div>
+                        <div class="store-address">24800 Center Ridge Rd, Westlake OH</div>
+                        <div class="store-status">🔴 Critical - 8 overdue items</div>
+                    </div>
+                    <div class="store-metrics">
+                        <div class="metric-value">2.6</div>
+                        <div class="metric-label">CSAT Score</div>
+                    </div>
+                </div>
+                <div class="store-issues">
+                    <div class="issue-badge">
+                        <div class="issue-count">8</div>
+                        <div class="issue-label">Overdue</div>
+                    </div>
+                    <div class="issue-badge">
+                        <div class="issue-count">4</div>
+                        <div class="issue-label">Failed Audits</div>
+                    </div>
+                    <div class="issue-badge">
+                        <div class="issue-count">3</div>
+                        <div class="issue-label">Compliance</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="store-card critical" onclick="openStore('2147')">
+                <div class="store-header">
+                    <div class="store-info">
+                        <div class="store-name">Store #2147 - Parma</div>
+                        <div class="store-address">6420 Pearl Rd, Parma OH</div>
+                        <div class="store-status">🔴 Critical - 5 overdue items</div>
+                    </div>
+                    <div class="store-metrics">
+                        <div class="metric-value">2.9</div>
+                        <div class="metric-label">CSAT Score</div>
+                    </div>
+                </div>
+                <div class="store-issues">
+                    <div class="issue-badge">
+                        <div class="issue-count">5</div>
+                        <div class="issue-label">Overdue</div>
+                    </div>
+                    <div class="issue-badge">
+                        <div class="issue-count">2</div>
+                        <div class="issue-label">Failed Audits</div>
+                    </div>
+                    <div class="issue-badge">
+                        <div class="issue-count">4</div>
+                        <div class="issue-label">Compliance</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="store-card" onclick="openStore('2198')">
+                <div class="store-header">
+                    <div class="store-info">
+                        <div class="store-name">Store #2198 - Mentor</div>
+                        <div class="store-address">8900 Mentor Ave, Mentor OH</div>
+                        <div class="store-status">🟠 High Risk - 3 overdue items</div>
+                    </div>
+                    <div class="store-metrics">
+                        <div class="metric-value">3.5</div>
+                        <div class="metric-label">CSAT Score</div>
+                    </div>
+                </div>
+                <div class="store-issues">
+                    <div class="issue-badge">
+                        <div class="issue-count">3</div>
+                        <div class="issue-label">Overdue</div>
+                    </div>
+                    <div class="issue-badge">
+                        <div class="issue-count">2</div>
+                        <div class="issue-label">Failed Audits</div>
+                    </div>
+                    <div class="issue-badge">
+                        <div class="issue-count">1</div>
+                        <div class="issue-label">Compliance</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="action-section">
+            <a href="https://app-next.workjamdemo.com/audits" class="action-button">
+                View All Tasks & Audits →
+            </a>
+            <a href="https://app-next.workjamdemo.com/audits" class="action-button secondary">
+                Generate Recovery Plan
+            </a>
+        </div>
+    </div>
+
+    <script>
+        // Get WorkJam URL variables
+        const urlParams = new URLSearchParams(window.location.search);
+        const regionId = urlParams.get('regionId') || urlParams.get('externalRegionId');
+        const regionCode = urlParams.get('regionCode') || urlParams.get('externalRegionCode');
+
+        if (regionCode) {
+            document.getElementById('region-name').textContent = regionCode + ' Region';
+        }
+
+        function openStore(storeId) {
+            // In production, this would deep-link to specific store's audit page
+            window.location.href = 'https://app-next.workjamdemo.com/audits';
+        }
+
+        console.log('At-Risk Stores Widget loaded for region:', regionId);
+    </script>
+</body>
+</html>

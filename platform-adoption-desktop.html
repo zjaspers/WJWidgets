@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Platform Adoption Dashboard</title>
+    
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="theme-green">
+    <div class="dashboard-widget">
+        <div class="widget-header">
+            <div class="widget-title">Platform Adoption & Engagement</div>
+            <div class="widget-subtitle">Operational Insights</div>
+        </div>
+
+        <div class="metrics-grid">
+            <div class="metric-card" onclick="drillDown('content-views')">
+                <div class="metric-value blue">266,873</div>
+                <div class="metric-label">Content Views</div>
+                <div class="metric-sublabel">Primary info channel</div>
+            </div>
+
+            <div class="metric-card" onclick="drillDown('surveys')">
+                <div class="metric-value green">42,301</div>
+                <div class="metric-label">Survey Responses</div>
+                <div class="metric-sublabel">Active employee voice</div>
+            </div>
+
+            <div class="metric-card" onclick="drillDown('maturity')">
+                <div class="metric-value purple">Stage 3</div>
+                <div class="metric-label">Maturity Level</div>
+                <div class="metric-sublabel">Operational execution</div>
+            </div>
+
+            <div class="metric-card" onclick="drillDown('compliance')">
+                <div class="metric-value green">234</div>
+                <div class="metric-label">Compliance Tasks</div>
+                <div class="metric-sublabel">Safety & procedures</div>
+            </div>
+
+            <div class="metric-card" onclick="drillDown('observations')">
+                <div class="metric-value blue">222</div>
+                <div class="metric-label">Site Observations</div>
+                <div class="metric-sublabel">Audits & walkthroughs</div>
+            </div>
+
+            <div class="metric-card" onclick="drillDown('training')">
+                <div class="metric-value green">2,527</div>
+                <div class="metric-label">Training Events</div>
+                <div class="metric-sublabel">Mobile learning</div>
+            </div>
+        </div>
+
+        <div class="footer-info">
+            Last updated: Today • Communications + Tasks + Training + Surveys integrated • <a href="#" onclick="viewFullReport(event)" style="color: #059669; text-decoration: none; font-weight: 600;">View Full Report →</a>
+        </div>
+    </div>
+
+    <script>
+        function drillDown(metric) {
+            // Replace with actual drill-down URLs or reporting links
+            const reportUrls = {
+                'content-views': 'https://your-analytics-platform.com/reports/content-engagement',
+                'surveys': 'https://your-analytics-platform.com/reports/survey-analytics',
+                'maturity': 'https://your-analytics-platform.com/reports/platform-maturity',
+                'compliance': 'https://your-analytics-platform.com/reports/compliance-tasks',
+                'observations': 'https://your-analytics-platform.com/reports/site-observations',
+                'training': 'https://your-analytics-platform.com/reports/training-completion'
+            };
+
+            // For demo purposes, show alert - replace with actual navigation
+            alert(`Drilling down into ${metric} report.\n\nIn production, this would navigate to:\n${reportUrls[metric]}`);
+            
+            // Uncomment to actually navigate:
+            // window.location.href = reportUrls[metric];
+        }
+
+        function viewFullReport(event) {
+            event.preventDefault();
+            alert('Opening full adoption report.\n\nIn production, this would link to your full analytics dashboard or reporting platform.');
+            
+            // Uncomment to navigate to full report:
+            // window.location.href = 'https://your-analytics-platform.com/reports/full-adoption';
+        }
+    </script>
+</body>
+</html>
